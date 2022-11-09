@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Information
+  </title>
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+  <!--  -->
+  <!-- 日曆 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+  <!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+    <div class="py-3 py-lg-4 navheader d-flex align-items-center">
+      <h1 class="mb-0">
+        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+      </h1>
+      
+      <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
+        id="menu-check" />
+      <label class="menu-open-button d-inline" for="menu-check">
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </div>
+
+
+
+    <!-- 下拉選單 -->
+    <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav border-top text-center fw-bold">
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          </a>
+        </li>
+        <li class="nav-item border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  
+<div class="bg-dark">
+    <div class="container">
+        
+        <div class="row py-4 py-lg-80p border-bottom">
+            <h2 id="shop">店家資訊</h2>
+            <div class="col-lg-6">
+                <h3>麵包學院</h3>
+                <p> 營業時間 : <br>
+                    Wed. Thu.     10:00 ~ 20:00</p>
+            </div>
+            <div class="col-lg-6">
+                <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.7482566520566!2d120.72762526129887!3d24.176515830132935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469183e84d37969%3A0x138d67fe7b12e56f!2z6bq15YyF5a246YCUSmVzc2UgQmFrZXJ5!5e0!3m2!1szh-TW!2stw!4v1667820496335!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="row py-4 py-lg-80p">
+            <h2 id="concept">店家理念</h2>
+            <div class="col-lg-6">
+                <img src="./assets/images/麵包圖/duncan-kidd-4vkEwpfm36I-unsplash.jpg" alt="bread">
+            </div>
+            <div class="col-lg-6">
+                <p>麵包猶如藝術，
+                    <br>
+                    論溫度、發酵時間、手勁...環環相扣的影響彼此，
+                    <br>
+                    最終影響一個麵包的好吃度，除了好吃之外，
+                    <br>
+                    最重要的就是 '健康' ，因此，本店採少鹽、油、糖，
+                    <br>
+                    把關您的健康是我們的責任。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer bg-secondary py-2">
+      <div class="container text-center d-lg-flex justify-content-between align-items-center">
+        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
+        <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- 日曆 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

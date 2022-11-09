@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Cart
+  </title>
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+  <!--  -->
+  <!-- 日曆 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+  <!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+    <div class="py-3 py-lg-4 navheader d-flex align-items-center">
+      <h1 class="mb-0">
+        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+      </h1>
+      
+      <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
+        id="menu-check" />
+      <label class="menu-open-button d-inline" for="menu-check">
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </div>
+
+
+
+    <!-- 下拉選單 -->
+    <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav border-top text-center fw-bold">
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          </a>
+        </li>
+        <li class="nav-item border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  
+<div class="bg-dark py-4">
+    <div class="container">
+        <h2 class="m-0">購物車</h2>
+        <!-- 步驟圖 -->
+        <!-- <ul class="row justify-content-between m-0">
+
+            <li class="rounded-circle bg-secondary d-flex align-items-center justify-content-center fs-lg-2 p-0"
+                style="width: 64px; height: 64px">1</li>
+
+            <li class="rounded-circle bg-light d-flex align-items-center justify-content-center fs-lg-2 p-0 line"
+                style="width: 64px; height: 64px">2</li>
+
+            <li class="rounded-circle bg-light d-flex align-items-center justify-content-center fs-lg-2 p-0"
+                style="width: 64px; height: 64px">3</li>
+
+
+        </ul> -->
+
+        <ul class="progresses m-0 d-flex">
+            <li class="active">step1</li>
+            <li>step2</li>
+            <li>step3</li>
+        </ul>
+
+        <!-- 購物車內容 -->
+        <!-- part1商品列表 -->
+        <ul>
+            <li class="row flex-nowrap">
+                <div class="col-lg-3">
+                    <img src="./assets/images/麵包圖/bread7.jpg" alt="bread7" style="height: 150px;">
+                </div>
+                <div class="col-lg-3">
+                    <h3>歐式麵包</h3>
+                </div>
+                <div class="col-lg-3">
+                    <h4>$90</h4>
+                    <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
+                    <input type="number" value="0">
+                    <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-lg-3">
+                    <input type="button" value="刪除">
+                </div>
+            </li>
+        </ul>
+        <!-- part2取貨日期 -->
+        <div class="d-flex py-4">
+            <p class="me-4">取貨日期 :</p>
+            <input type="text" name="inputDate">
+        </div>
+        <p>*溫馨提醒 : 為了麵包新鮮度，務必選擇出爐日期後三日內領取</p>
+
+
+        <!-- 確認區 -->
+
+        <div class="bg-secondary p-4">
+            <!-- part1 -->
+            <div class="d-flex justify-content-between">
+                <p class="m-0">總金額 : $180</p>
+                <input type="button" value="下一步">
+            </div>
+            <!-- part2 -->
+            <div class="d-flex justify-content-between">
+                <p class="m-0">領取日期 : 2022-12-25</p>
+                <input type="button" value="送出訂單">
+            </div>
+            <!-- part3 -->
+            <div>
+                <div class="text-center">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <p>訂購成功
+                    <br>感謝您的支持</p>
+                </div>
+                <p>取貨人 : 林小美</p>
+                <p>總金額 : $180</p>
+                <div class="d-flex justify-content-between">
+                    <p>領取日期 : 2022-12-25</p>
+                    <input type="button" value="完成">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+    <footer class="footer bg-secondary py-2">
+      <div class="container text-center d-lg-flex justify-content-between align-items-center">
+        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
+        <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- 日曆 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Chief
+  </title>
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+  <!--  -->
+  <!-- 日曆 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+  <!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+    <div class="py-3 py-lg-4 navheader d-flex align-items-center">
+      <h1 class="mb-0">
+        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+      </h1>
+      
+      <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
+        id="menu-check" />
+      <label class="menu-open-button d-inline" for="menu-check">
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </div>
+
+
+
+    <!-- 下拉選單 -->
+    <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav border-top text-center fw-bold">
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          </a>
+        </li>
+        <li class="nav-item border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  
+<div class="bg-dark">
+    <div class="container">
+        <div class="login">
+            <form action="#">
+                <h2 class="text-center">登入</h2>
+                <label class="me-6" for="account">帳號:</label>
+                <input type="text" name="account" id="account" placeholder="account">
+                <br>
+                <label class="me-6" for="password">密碼:</label>
+                <input type="password" name="password" id="password" placeholder="password">
+                <a class="btn btn-primary d-block" href="table.html">
+                    登入
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer bg-secondary py-2">
+      <div class="container text-center d-lg-flex justify-content-between align-items-center">
+        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
+        <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- 日曆 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

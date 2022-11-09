@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Table
+  </title>
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+  <!--  -->
+  <!-- 日曆 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+  <!--  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+    <div class="py-3 py-lg-4 navheader d-flex align-items-center">
+      <h1 class="mb-0">
+        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+      </h1>
+      
+      <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
+        id="menu-check" />
+      <label class="menu-open-button d-inline" for="menu-check">
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </div>
+
+
+
+    <!-- 下拉選單 -->
+    <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav border-top text-center fw-bold">
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          </a>
+        </li>
+        <li class="nav-item border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <div class="bg-dark py-4 py-lg-80p">
+  <div class="container">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="table.html">上架商品</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="result.html">訂單列表</a>
+      </li>
+    </ul>
+    
+    <table class="table table-dark table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">品項</th>
+          <th scope="col">品名</th>
+          <th scope="col">數量</th>
+          <th scope="col">圖片</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><input type="text" value="歐式麵包">
+          </td>
+          <td><input type="number" value="5"></td>
+          <td><input type="text" value="http://www.werwgdbod.ewr"></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <footer class="footer bg-secondary py-2">
+      <div class="container text-center d-lg-flex justify-content-between align-items-center">
+        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
+        <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa-solid fa-phone"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- 日曆 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
