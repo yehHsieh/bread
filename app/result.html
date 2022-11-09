@@ -1,0 +1,43 @@
+---
+title: Result
+layout: ./app/layout.ejs
+engine: ejs
+current: Result
+---
+<div class="bg-dark py-4 py-lg-80p">
+  <div class="container">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="table.html">上架商品</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="result.html">訂單列表</a>
+      </li>
+    </ul>
+    
+    <table class="table table-dark table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">訂單編號</th>
+          <th scope="col">訂購人</th>
+          <th scope="col">電話</th>
+          <th scope="col">品名</th>
+          <th scope="col">數量</th>
+          <th scope="col">取貨</th>
+          <th scope="col">金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>林小美</td>
+          <td>0923415464</td>
+          <td>歐式麵包</td>
+          <td>5</td>
+          <td>2022-12-23</td>
+          <td>$450</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

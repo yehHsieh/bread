@@ -1,0 +1,35 @@
+---
+title: Detail
+layout: ./app/layout.ejs
+engine: ejs
+current: detail
+---
+
+<div class="bg-dark">
+    <div class="container">
+        <!-- Bread Crumb -->
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="reserve.html">麵包預訂</a></li>
+                <li class="breadcrumb-item active" aria-current="page">詳細資訊</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="./assets/images/麵包圖/bread1.jpg" alt="bread1">
+            </div>
+            <div class="col-lg-4">
+                <h3>歐式麵包</h3>
+                <h4>NT 90</h4>
+                <p>利用低溫發酵，帶有嚼勁、彈牙口感</p>
+                <p>原料: 蛋、香草、麵粉</p>
+                <div class="d-flex">
+                    <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
+                    <input type="number" value="0">
+                    <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+                </div>
+                <button><i class="fa fa-cart-plus" aria-hidden="true"></i>加入購物車</button>
+            </div>
+        </div>
+    </div>
+</div>

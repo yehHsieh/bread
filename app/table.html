@@ -1,0 +1,49 @@
+---
+title: Table
+layout: ./app/layout.ejs
+engine: ejs
+current: Table
+---
+<div class="bg-dark py-4 py-lg-80p">
+  <div class="container">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="table.html">上架商品</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="result.html">訂單列表</a>
+      </li>
+    </ul>
+    
+    <table class="table table-dark table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">品項</th>
+          <th scope="col">品名</th>
+          <th scope="col">數量</th>
+          <th scope="col">圖片</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><input type="text" value="歐式麵包">
+          </td>
+          <td><input type="number" value="5"></td>
+          <td><input type="text" value="http://www.werwgdbod.ewr"></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

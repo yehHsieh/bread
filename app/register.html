@@ -1,0 +1,80 @@
+---
+title: Register
+layout: ./app/layout.ejs
+engine: ejs
+current: register
+---
+<div class="bg-dark">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">註冊</a>
+
+                <div class="register">
+                    <form action="#">
+                        <label for="name" class="me-6">姓名:</label>
+                        <input type="text" name="name" id="name" placeholder="name">
+                        <br>
+                        <label class="me-6" for="tel">電話:</label>
+                        <input type="tel" name="tel" id="tel" placeholder="tel">
+                        <br>
+                        <label class="me-6" for="email">信箱:</label>
+                        <input type="email" name="email" id="email" placeholder="email">
+                        <br>
+                        <label class="me-6" for="account">帳號:</label>
+                        <input type="text" name="account" id="account" placeholder="account">
+                        <br>
+                        <label class="me-6" for="password">密碼:</label>
+                        <input type="password" name="password" id="password" placeholder="password">
+                        <br>
+                        <label for="passwordCheck">密碼確認:</label>
+                        <input type="password" name="passwordCheck" id="passwordCheck" placeholder="passwordCheck">
+
+                        <!-- Button trigger modal -->
+                        <input type="submit" class="btn btn-primary d-block" value="確認" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        </input>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content text-black-50">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                        <p>註冊成功</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">登入</a>
+
+                <div class="login">
+                    <form action="#">
+                        <label class="me-6" for="account">帳號:</label>
+                        <input type="text" name="account" id="account" placeholder="account">
+                        <br>
+                        <label class="me-6" for="password">密碼:</label>
+                        <input type="password" name="password" id="password" placeholder="password">
+                        <a  class="btn btn-primary d-block" href="member.html">
+                            登入
+                        </a>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<a href="chief.html" class="btn btn-danger"></a>

@@ -1,0 +1,73 @@
+// font-size setting
+@each $name,
+$pixel in $grid-breakpoints {
+    @if ($pixel >=map-get($map: $grid-breakpoints, $key: sm)) {
+        @media (min-width: $pixel) {
+
+            @each $num,
+            $value in $font-sizes {
+                .fs-#{$name}-#{$num} {
+                    font-size: $value  !important;
+                }
+            }
+        }
+    }
+}
+
+;
+
+//color settings
+@each $name,
+$pixel in $grid-breakpoints {
+    @if ($pixel >=map-get($map: $grid-breakpoints, $key: sm)) {
+        @media (min-width: $pixel) {
+
+            @each $colorname,
+            $color in $colors {
+                .text-#{$name}-#{$colorname} {
+                    color: $color  !important;
+                }
+            }
+        }
+    }
+}
+
+;
+
+// setting font-weight
+.fw-medium {
+    font-weight: 500;
+}
+
+//setting position
+.end-lg-100 {
+    @include laptop {
+        left: 0 !important;
+    }
+}
+
+// image set
+.image-cover {
+    object-fit: cover;
+}
+
+.image-contain {
+    object-fit: contain;
+}
+
+.image-fill {
+    object-fit: fill;
+}
+
+.img-bottom{
+    object-position: bottom;
+}
+
+.ratio-col{
+    aspect-ratio: 3/4;
+}
+
+// center reset
+.center-point{
+    transform: translate(-50%,-50%);
+}
