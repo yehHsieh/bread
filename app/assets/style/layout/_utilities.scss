@@ -71,3 +71,9 @@ $pixel in $grid-breakpoints {
 .center-point{
     transform: translate(-50%,-50%);
 }
+
+.c3-axis-x, .c3-axis-y
+{
+    stroke: #fff;
+  }
+    

@@ -2,46 +2,59 @@
 title: Table
 layout: ./app/layout.ejs
 engine: ejs
-current: Table
+current: table
 ---
 <div class="bg-dark py-4 py-lg-80p">
   <div class="container">
-    <ul class="nav">
+    <ul class="nav mb-3">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="table.html">上架商品</a>
+        <a class="nav-link active border-bottom border-primary" aria-current="page" href="table.html">上架商品</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="result.html">訂單列表</a>
       </li>
     </ul>
     
-    <table class="table table-dark table-striped ">
+    <table class="table table-dark table-striped">
       <thead>
         <tr>
           <th scope="col">品項</th>
           <th scope="col">品名</th>
-          <th scope="col">數量</th>
+          <th scope="col">價格</th>
+          <th scope="col">描述</th>
+          <th scope="col">原料</th>
           <th scope="col">圖片</th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <th scope="row">#</th>
+          <td><input type="text" placeholder="歐式麵包" class="addBreadName d-inline-block" style="width: 120px;">
+          </td>
+          <td><input type="number" placeholder="90" class="addPrice" style="width: 50px;"></td>
+          <td><input type="text" placeholder="利用低溫發酵，帶有嚼勁、彈牙口感" class="addContent" style="width: 280px;">
+            <td><input type="text" placeholder="蛋、香草、麵粉" class="addSource" style="width: 200px;">
+          <td><input type="text" placeholder="http://www.werwgdbod.ewr" class="addImgur"></td>
+          <td><button class="btn btn-primary addProduct">新增</button></td>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="tableBody">
         <tr>
           <th scope="row">1</th>
-          <td><input type="text" value="歐式麵包">
-          </td>
-          <td><input type="number" value="5"></td>
-          <td><input type="text" value="http://www.werwgdbod.ewr"></td>
+          <td>歐式麵包</td>
+          <td>90</td>
+          <td>利用低溫發酵，帶有嚼勁、彈牙口感</td>
+          <td>蛋、麵粉、牛奶、植物油</td>
+          <td><img src="https://raw.githubusercontent.com/yehHsieh/bread/main/app/assets/images/%E9%BA%B5%E5%8C%85%E5%9C%96/laura-filip-W0PDHT_sYoQ-unsplash.jpg" alt="bread" style="height: 55px;"></td>
+          <td><button class="btn btn-light deleteProduct">刪除</button></td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>歐式麵包</td>
+          <td>90</td>
+          <td>利用低溫發酵，帶有嚼勁、彈牙口感</td>
+          <td>蛋、麵粉、牛奶、植物油</td>
+          <td><img src="https://raw.githubusercontent.com/yehHsieh/bread/main/app/assets/images/%E9%BA%B5%E5%8C%85%E5%9C%96/laura-filip-W0PDHT_sYoQ-unsplash.jpg" alt="bread" style="height: 55px;"></td>
+          <td><button class="btn btn-light">刪除</button></td>
         </tr>
       </tbody>
     </table>

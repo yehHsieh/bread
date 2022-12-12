@@ -1,0 +1,55 @@
+---
+title: Cart2
+layout: ./app/layout.ejs
+engine: ejs
+current: cart2
+---
+
+<div class="bg-dark py-4">
+    <div class="container" id="cartArea2">
+        <h2 class="m-0">購物車</h2>
+        <!-- 步驟圖 -->
+        <!-- <ul class="row justify-content-between m-0">
+
+            <li class="rounded-circle bg-secondary d-flex align-items-center justify-content-center fs-lg-2 p-0"
+                style="width: 64px; height: 64px">1</li>
+
+            <li class="rounded-circle bg-light d-flex align-items-center justify-content-center fs-lg-2 p-0 line"
+                style="width: 64px; height: 64px">2</li>
+
+            <li class="rounded-circle bg-light d-flex align-items-center justify-content-center fs-lg-2 p-0"
+                style="width: 64px; height: 64px">3</li>
+
+
+        </ul> -->
+
+        <ul class="progresses m-0 d-flex">
+            <li>step1</li>
+            <li class="active">step2</li>
+            <li>step3</li>
+        </ul>
+
+        <!-- 購物車內容 -->
+        <!-- part2取貨日期 -->
+        <div class="d-flex py-4">
+            <p class="me-4">取貨日期 :</p>
+            <input type="text" name="inputDate" class="datePick">
+        </div>
+        <p>*溫馨提醒 : 為了麵包新鮮度，務必選擇出爐日期後三日內領取</p>
+
+
+        <!-- 確認區 -->
+
+        <div class="bg-secondary p-4">
+            <!-- part2 -->
+            <div class="d-flex justify-content-between">
+                <p class="m-0 dateShow">領取日期 : </p>
+                <div>
+                    <a href="./cart.html" class="btn btn-light">上一步</a>
+                    <a class="btn btn-light sendOrder">送出訂單</a>
+                    <!-- <input type="button" value="送出訂單" class="sendOrder"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

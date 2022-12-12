@@ -1,29 +1,7 @@
-$(function() {
-  console.log('Hello Bootstrap5');
-  
-  // register
-const navTab = document.querySelector(".nav-tabs");
-const registerTab = document.querySelector(".registerTab");
-const loginTab = document.querySelector(".loginTab");
+// const e = require("express");
 
-navTab.addEventListener("click", e =>{
-    e.preventDefault();
-    let changeTab = e.target.getAttribute("class");
-    console.log(changeTab)
-    if(changeTab != "nav-link active register text-center" && changeTab != "nav-link active loginBtn text-center"){
-      return
-    }else if(changeTab == "nav-link active register text-center"){
-      registerTab.classList.add("d-block");
-      registerTab.classList.remove("d-none");
-      loginTab.classList.remove("d-block");
-      loginTab.classList.add("d-none");
-    }else if(changeTab == "nav-link active loginBtn text-center"){
-      loginTab.classList.remove("d-none");
-      loginTab.classList.add("d-block");
-      registerTab.classList.remove("d-block");
-      registerTab.classList.add("d-none");
-    }
-})
+$(function () {
+  console.log('Hello Bootstrap5');
 });
 
 // swiper
@@ -38,11 +16,85 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// 日曆
-const elem = document.querySelector('input[name="inputDate"]');
-const datepicker = new Datepicker(elem, {
-  // ...options
-  language: 'zh-TW',
-  buttonClass: 'btn',
-}); 
+// 讀取會員資料
+const memberCenter = document.querySelector("#memberCenter");
+const loginNav = document.querySelector("#loginNav");
+const cartNav = document.querySelector("#cartNav");
 
+memberCenter.addEventListener("click", e => {
+  e.preventDefault();
+  getUserIndexData();
+})
+
+loginNav.addEventListener("click", e => {
+  e.preventDefault();
+  getLoginData();
+})
+
+cartNav.addEventListener("click", e => {
+  e.preventDefault();
+  getCartData();
+})
+
+function getUserIndexData() {
+  let token = localStorage.getItem("token");
+  let id = localStorage.getItem("id");
+  axios.get(`http://localhost:3000/600/users/${id}`, {
+    headers: {
+      "authorization": `Bearer ${token}`
+    }
+  })
+    .then(function (response) {
+      window.location.href = "./member.html"
+      console.log(response.data)
+    })
+    .catch(function (error) {
+      Swal.fire("請先登入會員")
+      .then(function(){
+        window.location.href = "./register.html"
+      })
+      console.log(error.response)
+      return
+    })
+}
+
+function getLoginData() {
+  let token = localStorage.getItem("token");
+  let id = localStorage.getItem("id");
+  axios.get(`http://localhost:3000/600/users/${id}`, {
+    headers: {
+      "authorization": `Bearer ${token}`
+    }
+  })
+    .then(function (response) {
+      Swal.fire("已登入會員")
+      .then(function(){
+        window.location.href = "#";
+      })
+    })
+    .catch(function (error) {
+      window.location.href = "./register.html"
+      console.log(error.response)
+    })
+}
+
+function getCartData() {
+  let token = localStorage.getItem("token");
+  let id = localStorage.getItem("id");
+  axios.get(`http://localhost:3000/600/users/${id}`, {
+    headers: {
+      "authorization": `Bearer ${token}`
+    }
+  })
+    .then(function (response) {
+      window.location.href = "./cart.html"
+    })
+    .catch(function (error) {
+      Swal.fire("購物車是空的")
+      .then(function(){
+        window.location.href = "#";
+      })
+      console.log(error.response)
+      return
+    })
+}

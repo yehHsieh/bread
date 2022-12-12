@@ -2,36 +2,92 @@
 title: Reserve
 layout: ./app/layout.ejs
 engine: ejs
-current: Reserve
+current: reserve
 ---
 
 <div class="bg-dark p-4">
-    <div class="container">
+    <div class="container" id="productPage">
         <div class="row">
+
+
+
+            
+
+          
+
+         
+
+
+
             <div class="col-lg-10 offset-1">
                 <p><i class="fa fa-clock-o" aria-hidden="true"></i>收單倒數:
-                    <span style="background-color: #000;">0</span>
+
+                    <div class="tick" data-did-init="handleTickInit">
+
+                        <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(h, m, s) -> delay" style="font-size: .4704px;">
+        
+                            <div class="tick-group">
+        
+                                <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+        
+                                    <span data-view="flip"></span>
+        
+                                </div>
+        
+                                <span data-key="label" data-view="text" class="tick-label"></span>
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="tick-onended-message" style="display:none">
+                        <p>Time's up</p>
+                    </div>
+
+                    <!-- <span style="background-color: #000;">0</span>
                     <span style="background-color: #000;">0</span>天
                     <span style="background-color: #000;">1</span>
                     <span style="background-color: #000;">1</span>時
                     <span style="background-color: #000;">1</span>
-                    <span style="background-color: #000;">5</span>分
+                    <span style="background-color: #000;">5</span>分 -->
                 </p>
                 <div class="d-flex mb-3">
-                    <input type="text" placeholder="Search">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search" class="search">
+                    <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
         </div>
         <!-- Bread Area -->
-        <ul class="row m-0">
+        <ul class="row m-0 breadArea">
             <li class="col-6 col-lg-4">
                 <div class="card border-0">
-                    <a href="detail.html"><img src="./assets/images/麵包圖/bread1.jpg" class="card-img-top" alt="bread1"></a>
+                    <a href="detail.html"><img src="./assets/images/麵包圖/bread1.jpg" class="card-img-top"
+                            alt="bread1"></a>
                     <div class="card-body bg-secondary">
                         <div class="d-flex" style="height: 35px;">
                             <p class="fs-12p ">NT90</p>
-                            <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
+                            <button class="p-0 border-0"><i class="fa fa-minus-square-o"
+                                    aria-hidden="true"></i></button>
+                            <!-- <input type="number" value="0"> -->
+                            <p>0</p>
+                            <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+                            <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                        </div>
+                        <h3 class="card-title fs-4 mt-3">歐式麵包</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="col-6 col-lg-4">
+                <div class="card border-0">
+                    <a href="detail.html"><img src="./assets/images/麵包圖/bread3.jpg" class="card-img-top"
+                            alt="bread3"></a>
+                    <div class="card-body bg-secondary">
+                        <div class="d-flex" style="height: 35px;">
+                            <p class="fs-12p ">NT90</p>
+                            <button class="p-0 border-0"><i class="fa fa-minus-square-o"
+                                    aria-hidden="true"></i></button>
                             <input type="number" value="0">
                             <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
                             <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
@@ -42,26 +98,13 @@ current: Reserve
             </li>
             <li class="col-6 col-lg-4">
                 <div class="card border-0">
-                    <a href="detail.html"><img src="./assets/images/麵包圖/bread3.jpg" class="card-img-top" alt="bread3"></a>
+                    <a href="detail.html"><img src="./assets/images/麵包圖/bread7.jpg" class="card-img-top"
+                            alt="bread7"></a>
                     <div class="card-body bg-secondary">
                         <div class="d-flex" style="height: 35px;">
                             <p class="fs-12p ">NT90</p>
-                            <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
-                            <input type="number" value="0">
-                            <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
-                            <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
-                        </div>
-                        <h3 class="card-title fs-4 mt-3">歐式麵包</h3>
-                    </div>
-                </div>
-            </li>
-            <li class="col-6 col-lg-4">
-                <div class="card border-0">
-                    <a href="detail.html"><img src="./assets/images/麵包圖/bread7.jpg" class="card-img-top" alt="bread7"></a>
-                    <div class="card-body bg-secondary">
-                        <div class="d-flex" style="height: 35px;">
-                            <p class="fs-12p ">NT90</p>
-                            <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
+                            <button class="p-0 border-0"><i class="fa fa-minus-square-o"
+                                    aria-hidden="true"></i></button>
                             <input type="number" value="0">
                             <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
                             <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>

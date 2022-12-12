@@ -10,12 +10,12 @@ let envOptions = {
   copyFile: {
     src: [
       `${srcPath}/**/*`,
-      `!${srcPath}/assets/js/**/*.js`,
-      `!${srcPath}/assets/style/*`,
-      `!${srcPath}/assets/style/**/*.scss`,
-      `!${srcPath}/assets/style/**/*.sass`,
-      `!${srcPath}/**/*.ejs`,
-      `!${srcPath}/**/*.html`,
+      `${srcPath}/assets/js/**/*.js`,
+      `${srcPath}/assets/style/*`,
+      `${srcPath}/assets/style/**/*.scss`,
+      `${srcPath}/assets/style/**/*.sass`,
+      `${srcPath}/**/*.ejs`,
+      `${srcPath}/**/*.html`,
     ],
     path: distPath,
   },
@@ -41,9 +41,32 @@ let envOptions = {
   },
   javascript: {
     src: [
-      `${srcPath}/assets/js/**/*.js`
+      `${srcPath}/assets/js/**/*.js`,
+      // `!${srcPath}/assets/js/index.js`,
+    // `!${srcPath}/assets/js/admin.js`,
+      `!${srcPath}/assets/js/register.js`,
+      `!${srcPath}/assets/js/reserve.js`,
+      `!${srcPath}/assets/js/cart.js`,
+      `!${srcPath}/assets/js/cart2.js`,
+      `!${srcPath}/assets/js/table.js`,
+      `!${srcPath}/assets/js/result.js`,
+      `!${srcPath}/assets/js/member.js`,
     ],
     concat: 'all.js',
+    path: `${distPath}/assets/js`,
+  },
+  copyJSFile: {
+    src: [
+      // `!${srcPath}/assets/js/index.js`,
+    // `!${srcPath}/assets/js/admin.js`,
+      `${srcPath}/assets/js/register.js`,
+      `${srcPath}/assets/js/reserve.js`,
+      `${srcPath}/assets/js/cart.js`,
+      `${srcPath}/assets/js/cart2.js`,
+      `${srcPath}/assets/js/table.js`,
+      `${srcPath}/assets/js/result.js`,
+      `${srcPath}/assets/js/member.js`,
+    ],
     path: `${distPath}/assets/js`,
   },
   vendors: {

@@ -101,11 +101,23 @@ function deploy() {
     .pipe($.ghPages());
 }
 
+function copyJSFile() {
+  return gulp.src(envOptions.copyJSFile.src)
+    .pipe(gulp.dest(envOptions.copyJSFile.path))
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      }),
+    );
+}
+
+
 function watch() {
   gulp.watch(envOptions.html.src, gulp.series(layoutHTML));
   gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
   gulp.watch(envOptions.javascript.src, gulp.series(babel));
   gulp.watch(envOptions.img.src, gulp.series(copyFile));
+  gulp.watch(envOptions.copyJSFile.src, gulp.series(copyJSFile));
   gulp.watch(envOptions.style.src, gulp.series(sass));
 }
 
@@ -113,6 +125,6 @@ exports.deploy = deploy;
 
 exports.clean = clean;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs);
+exports.build = gulp.series(clean, copyFile, copyJSFile, layoutHTML, sass, babel, vendorsJs);
+exports.default = gulp.series(clean, copyFile, copyJSFile, layoutHTML, sass, babel, vendorsJs, gulp.parallel(browser, watch));
 
-exports.default = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs, gulp.parallel(browser, watch));
