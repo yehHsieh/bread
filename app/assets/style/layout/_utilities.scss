@@ -7,7 +7,7 @@ $pixel in $grid-breakpoints {
             @each $num,
             $value in $font-sizes {
                 .fs-#{$name}-#{$num} {
-                    font-size: $value  !important;
+                    font-size: $value !important;
                 }
             }
         }
@@ -25,7 +25,7 @@ $pixel in $grid-breakpoints {
             @each $colorname,
             $color in $colors {
                 .text-#{$name}-#{$colorname} {
-                    color: $color  !important;
+                    color: $color !important;
                 }
             }
         }
@@ -59,21 +59,37 @@ $pixel in $grid-breakpoints {
     object-fit: fill;
 }
 
-.img-bottom{
+.img-bottom {
     object-position: bottom;
 }
 
-.ratio-col{
+.ratio-col {
     aspect-ratio: 3/4;
 }
 
 // center reset
-.center-point{
-    transform: translate(-50%,-50%);
+.center-point {
+    transform: translate(-50%, -50%);
 }
 
-.c3-axis-x, .c3-axis-y
-{
+.centerTop-point {
+    transform: translate(0, -10%);
+}
+
+.c3-axis-x,
+.c3-axis-y {
     stroke: #fff;
-  }
-    
+}
+
+.nav-color {
+    background-color: rgba(14, 17, 24, 0.2);
+}
+
+
+.top-25{
+    top: 25% !important;
+}
+
+.left-25{
+    left: 25% !important;
+}

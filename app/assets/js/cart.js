@@ -73,7 +73,7 @@ function stepFootRender() {
     return `<div class="bg-secondary p-4">
             <div class="d-flex justify-content-between">
                 <p class="m-0">總金額 : $${totalPrice}</p>
-                <a class="btn btn-light" href="./cart2.html">下一步</a>
+                <a class="btn btn-light shine border-0" href="./cart2.html">下一步</a>
             </div>
             </div>`
 
@@ -99,11 +99,11 @@ function combineCartStrStep1(item) {
                    <h3>${item.product.breadName}</h3>
                </div>
                <div class="col-lg-3">
-                   <h4>價錢:$${item.product.price * item.num}</h4>
+                   <h4 class="mb-4">價錢:$${item.product.price * item.num}</h4>
                    <h5 class="d-inline">數量:</h5>
-                   <button class="p-0 border-0" data-minus="${item.id}"><i class="fa fa-minus-square-o" aria-hidden="true" data-minus="${item.id}"></i></button>
+                   <button class="p-1 border-0 rounded-1" data-minus="${item.id}"><i class="fa fa-minus" aria-hidden="true" data-minus="${item.id}"></i></button>
                    <p class="w-50 text-center d-inline">${item.num}</p>
-                   <button class="p-0 border-0" data-plus="${item.id}"><i class="fa fa-plus-square-o" aria-hidden="true" data-plus="${item.id}"></i></button>
+                   <button class="p-1 border-0 rounded-1" data-plus="${item.id}"><i class="fa fa-plus" aria-hidden="true" data-plus="${item.id}"></i></button>
                </div>
                <div class="col-lg-2 offset-1">
                    <input type="button" value="刪除" data-delete="${item.id}">

@@ -17,13 +17,13 @@
   right: 0;
 }
 
-.bg-marble{
-  background: url(../images/麵包圖/大理石.jpg) center center ;
+.bg-marble {
+  background: url(../images/麵包圖/大理石.jpg) center center;
   background-size: cover;
   // transform: rotateY(180deg);
 }
 
-.bg-breadGo{
+.bg-breadGo {
   background: url(../images/麵包圖/giveBread.jpg) center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -35,9 +35,10 @@
   right: 0;
 }
 
-.arrow{
+.arrow {
   position: relative;
-  &::after{
+
+  &::after {
     position: absolute;
     bottom: 9%;
     right: -3px;
@@ -48,7 +49,7 @@
     border-radius: 3px;
     background-color: #dee2e6;
   }
-} 
+}
 
 
 //已登入
@@ -72,7 +73,7 @@
   transform: translate(-50%, -50%);
   background: $dark;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   border-radius: 10px;
   opacity: 50%;
 }
@@ -100,9 +101,10 @@
   outline: none;
   background: transparent;
 }
+
 .login-box .user-box label {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
@@ -111,8 +113,8 @@
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
   top: -20px;
   left: 0;
   color: $primary;
@@ -138,9 +140,9 @@
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px $primary,
-              0 0 25px $primary,
-              0 0 50px $primary,
-              0 0 100px $primary;
+    0 0 25px $primary,
+    0 0 50px $primary,
+    0 0 100px $primary;
 }
 
 .login-box a span {
@@ -161,7 +163,9 @@
   0% {
     left: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -180,7 +184,9 @@
   0% {
     top: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -199,7 +205,9 @@
   0% {
     right: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -218,7 +226,9 @@
   0% {
     bottom: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     bottom: 100%;
   }
 }
@@ -226,70 +236,223 @@
 
 // 倒數
 
-                .tick {
-                    // font-size: 1rem;
-                    white-space: nowrap;
-                    font-family: arial, sans-serif;
-                }
+.tick {
+  // font-size: 1rem;
+  white-space: nowrap;
+  font-family: arial, sans-serif;
+}
 
-                .tick-flip,
-                .tick-text-inline {
-                    // font-size: 2.5em;
-                }
+.tick-flip,
+.tick-text-inline {
+  font-size: .8em;
+}
 
-                .tick-label {
-                    // margin-top: 1em;
-                    font-size: 1em;
-                }
+.tick-label {
+  // margin-top: 1em;
+  font-size: .8em;
+}
 
-                .tick-char {
-                    width: 1.5em;
-                }
+.tick-char {
+  width: 1.5em;
+}
 
-                .tick-text-inline {
-                    display: inline-block;
-                    text-align: center;
-                    min-width: 1em;
-                }
+.tick-text-inline {
+  display: inline-block;
+  text-align: center;
+  min-width: 1em;
+}
 
-                .tick-text-inline+.tick-text-inline {
-                    margin-left: -.325em;
-                }
+.tick-text-inline+.tick-text-inline {
+  margin-left: -.325em;
+}
 
-                .tick-group {
-                    margin: 0 .5em;
-                    text-align: center;
-                }
+.tick-group {
+  margin: 0 .5em;
+  text-align: center;
+}
 
-                body {
-                    background-color: rgb(255, 255, 255) !important;
-                }
+body {
+  background-color: rgb(255, 255, 255) !important;
+}
 
-                .tick-text-inline {
-                    color: rgb(90, 93, 99) !important;
-                }
+.tick-text-inline {
+  color: rgb(90, 93, 99) !important;
+}
 
-                .tick-label {
-                    color: rgb(90, 93, 99) !important;
-                }
+.tick-label {
+  color: rgb(90, 93, 99) !important;
+}
 
-                .tick-flip-panel {
-                    color: rgb(255, 255, 255) !important;
-                }
+.tick-flip-panel {
+  color: rgb(255, 255, 255) !important;
+}
 
-                .tick-flip {
-                    font-family: important;
-                }
+.tick-flip {
+  font-family: important;
+}
 
-                .tick-flip-panel-text-wrapper {
-                    line-height: 1.45 !important;
-                }
+.tick-flip-panel-text-wrapper {
+  line-height: 1.45 !important;
+}
 
-                .tick-flip-panel {
-                    background-color: rgb(59, 61, 59) !important;
-                }
+.tick-flip-panel {
+  background-color: rgb(59, 61, 59) !important;
+}
 
-                .tick-flip {
-                    border-radius: 0.12em !important;
-                }
-           
+.tick-flip {
+  border-radius: 0.12em !important;
+}
+
+
+
+// pin
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+
+.gate-right-1 {
+  background-color: #85b8cb;
+}
+
+.gate-right-1>i {
+  color: #69f0ae;
+}
+
+.gate-left-1 {
+  background-color: #e7ffa9;
+}
+
+.gate-left-1>i {
+  color: #ffa09d;
+}
+
+.gate-right-2 {
+  background-color: #1D6A96;
+}
+
+.gate-right-2>i {
+  color: #69f0ae;
+}
+
+.gate-left-2 {
+  background-color: #005f62;
+}
+
+.gate-left-2>i {
+  color: #ffa09d;
+}
+
+.gate-right-3 {
+  background-color: #283b42;
+}
+
+.gate-right-3>i {
+  color: #69f0ae;
+}
+
+.gate-left-3 {
+  background-color: #ddfbed;
+}
+
+.gate-left-3>i {
+  color: #ffa09d
+}
+
+
+
+.dot {
+    &:nth-child(1) {
+      top: 15%;
+      left: 20%;
+    }
+    &:nth-child(2) {
+      top: 30%;
+      left: 60%;
+    }
+    &:nth-child(3) {
+      top: 50%;
+      left: 30%;
+    }
+    &:nth-child(4) {
+      top: 20%;
+      left: 33%;
+    }
+    &:nth-child(5) {
+      top: 7%;
+      left: 55%;
+    }
+    &:nth-child(6) {
+      top: 18%;
+      left: 40%;
+    }
+    &:nth-child(7) {
+      top: 21%;
+      left: 35%;
+    }
+    &:nth-child(8) {
+      top: 25%;
+      left: 50%;
+    }
+    &:nth-child(9) {
+      top: 40%;
+      left: 66%;
+    }
+    &:nth-child(10) {
+      top: 10%;
+      left: 50%;
+    }
+    &:nth-child(11) {
+      top: 30%;
+      left: 47%;
+    }
+    &:nth-child(12) {
+      top: 12%;
+      left: 40%;
+    }
+    &:nth-child(13) {
+      top: 20%;
+      left: 53%;
+    }
+    &:nth-child(14) {
+      top: 5%;
+      left: 50%;
+    }
+    &:nth-child(15) {
+      top: 24%;
+      left: 50%;
+    }
+    &:nth-child(16) {
+      top: 35%;
+      left: 35%;
+    }
+    &:nth-child(17) {
+      top: 60%;
+      left: 30%;
+    }
+    &:nth-child(18) {
+      top: 70%;
+      left: 56%;
+    }
+    &:nth-child(19) {
+      top: 80%;
+      left: 35%;
+    }
+    &:nth-child(20) {
+      top: 64%;
+      left: 20%;
+    }
+    &:nth-child(21) {
+      top: 73%;
+      left: 45%;
+    }
+}
+

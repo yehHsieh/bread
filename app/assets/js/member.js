@@ -22,6 +22,13 @@ function getUserData() {
             memberData = response.data;
             renderInf();
             console.log(response.data)
+            console.log(memberData.isAdmin)
+            let backManage = document.querySelector("#backManage");
+            
+            if (memberData.isAdmin == true) {
+                backManage.classList.remove("d-none");
+                console.log("12333")
+            } else { console.log("555") }
         })
         .catch(function (error) {
             console.log(error.response)
@@ -51,6 +58,7 @@ function getOrderData() {
 }
 
 
+
 // 頁面切換
 const memberPage = document.querySelector(".memberPage");
 
@@ -66,10 +74,11 @@ function renderInf() {
                 </a>
                 <a href="#" class="list-group-item list-group-item-action" id="memberOrder">已完成訂單</a>
                 <a href="#" class="list-group-item list-group-item-action" id="changeMember">會員資料修改</a>
+                <a href="table.html" class="list-group-item list-group-item-action d-none" id="backManage">後臺管理</a>
                 <a href="#" class="list-group-item list-group-item-action" id="logout">登出</a>
               </div>
         </div>
-        <div class="col-9">
+        <div class="col-9" style="height: 100vh;">
         <div class="bg-white p-4 rounded-3">
         <ul class="text-secondary">
                             <h3>會員基本資料</h3>
@@ -162,7 +171,7 @@ function changeRender() {
             <a href="#" class="list-group-item list-group-item-action" id="logout">登出</a>
           </div>
     </div>
-    <div class="col-9">
+    <div class="col-9" style="height: 100vh;">
     <div class="bg-white p-4 rounded-3">
     <form action="#" class="text-secondary">
     <div class="d-flex justify-content-between mb-4">

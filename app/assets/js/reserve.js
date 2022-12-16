@@ -35,18 +35,21 @@ function getProductList() {
 }
 
 function combineStr(item) {
-    return `<li class="col-6 col-lg-4 mb-2">
+    return `<li class="col-12 col-md-6 col-lg-4 mb-4">
   <div class="card border-0">
-      <a style="cursor: pointer;"><img data-picture="${item.id}" src="${item.imgur}" class="card-img-top" alt="bread1"></a>
+      <a style="cursor: pointer;" class="overflow-hidden"><img data-picture="${item.id}" src="${item.imgur}" class="card-img-top img-hover" alt="bread1"></a>
       <div class="card-body bg-secondary">
-          <div class="d-flex" style="height: 35px;">
-              <p class="fs-12p ">NT${item.price}</p>
-              <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true" data-class ="${item.id}"></i></button>
+      
+      <h3 class="card-title fs-4 mt-3">${item.breadName}</h3>
+      <p class="fs-5">NT ${item.price}</p>
+     
+      <div class="d-flex justify-content-between" style="height: 35px;">
+              
+              <button class="p-1 border-0 rounded-1"><i class="fa fa-minus" aria-hidden="true" data-class ="${item.id}"></i></button>
               <p class="w-50 text-center">${item.num}</p> 
-              <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true" data-id ="${item.id}"></i></button>
-              <button class="addCartBtn"><i class="fa fa-cart-plus" aria-hidden="true" data-cart=${item.id}></i></button>
+              <button class="p-1 border-0 rounded-1"><i class="fa fa-plus" aria-hidden="true" data-id ="${item.id}"></i></button>
+              <button class="addCartBtn px-3 border-0 rounded-pill"><i class="fa fa-cart-plus text-primary" aria-hidden="true" data-cart=${item.id}></i></button>
           </div>
-          <h3 class="card-title fs-4 mt-3">${item.breadName}</h3>
       </div>
   </div>
 </li>`
@@ -189,15 +192,15 @@ function getProductDetailRender(item) {
   </div>
   <div class="col-lg-4">
       <h3>${item.breadName}</h3>
-      <h4>NT ${item.price}</h4>
+      <h4 class="mb-3">NT ${item.price}</h4>
       <p>${item.content}</p>
       <p>原料: ${item.source}</p>
       <div class="d-flex mb-3">
-          <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true" data-classDetail="${item.id}"></i></button>
+          <button class="p-1 border-0 rounded-1"><i class="fa fa-minus" aria-hidden="true" data-classDetail="${item.id}"></i></button>
           <div id="cartNum" class="w-50 text-center"><span>${item.num}</span></div>
-          <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true" data-idDetail="${item.id}"></i></button>
+          <button class="p-1 border-0 rounded-1"><i class="fa fa-plus" aria-hidden="true" data-idDetail="${item.id}"></i></button>
       </div>
-      <button data-cartDetail=${item.id}><i class="fa fa-cart-plus" aria-hidden="true"  ></i>加入購物車</button>
+      <button data-cartDetail=${item.id} class="py-2 px-3 border-0 rounded-pill shine"><i class="fa fa-cart-plus me-1 text-primary" aria-hidden="true"></i>加入購物車</button>
   </div>
 </div>`
 
@@ -285,11 +288,15 @@ function handleTickInit(tick) {
     localStorage.setItem('countdown-offset', offset);
 
     // time in hours the timer will run down
-    var timeDuration = Tick.helper.duration(1, 'days');
+    let closeTime = localStorage.getItem("timeValue");
+    var timeDuration = Tick.helper.duration(1, 'day');
+    console.log(closeTime)
     console.log(timeDuration)
+
     // add 24 hours to get final deadline
     var deadline = new Date(offset.setMilliseconds(offset.getMilliseconds() + timeDuration));
-
+    
+console.log(deadline)
     // create counter
     var counter = Tick.count.down(deadline, { format: ['h', 'm', 's'] });
 

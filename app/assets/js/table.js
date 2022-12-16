@@ -40,7 +40,7 @@ tableBody.addEventListener("click", e => {
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: "#d33",
-        confirmButtonText: '確定'
+        confirmButtonText: 'Sure?'
     }).then((result) => {
         if (result.isConfirmed) {
             axios.delete(`http://localhost:3000/products/${deleteProduct}`)
@@ -89,6 +89,18 @@ tableBody.addEventListener("click", e => {
         });
         tableBody.innerHTML = str;
     }
+
+
+//時間設定
+const timeSet = document.querySelector("#timeSet");
+const timeInput = document.querySelector(".timeInput");
+
+timeSet.addEventListener("click", e =>{
+    e.preventDefault();
+    localStorage.setItem("timeValue",timeInput.value);
+    // handleTickInit(tick);
+})
+
 
 // 滾動高度
 // const table = document.querySelector(".table")

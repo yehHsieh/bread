@@ -15,9 +15,9 @@ function combineStr() {
     let showPickTime = localStorage.getItem("pickTime")
     let pay = localStorage.getItem("shouldPay")
     let userName = localStorage.getItem("userName");
-    return `<div>
+    return `<div style="height: 100vh;">
     <div class="text-center py-120p">
-        <i class="fa fa-check-circle text-primary" aria-hidden="true"></i>
+    <img src="./assets/images/麵包圖/smile-hand-drawn-emoticon.png" alt="smile" style="width:48px;">
         <p>訂購成功
         <br>感謝您的支持</p>
     </div>
@@ -25,7 +25,7 @@ function combineStr() {
     <p>總金額 : $${pay}</p>
     <div class="d-flex justify-content-between">
         <p>領取日期 : ${showPickTime}</p>
-        <input type="button" value="完成" class="finishBtn">
+        <input type="button" value="完成" class="finishBtn rounded-pill px-4 py-3 bg-primary shine border-0">
     </div>
 </div>`
 }
@@ -59,7 +59,7 @@ function render() {
 // 刪除購物車內容
 cartArea2.addEventListener("click", e =>{
     let finishBtn = e.target.getAttribute("class");
-    if(finishBtn == "finishBtn"){
+    if(finishBtn == "finishBtn rounded-pill px-4 py-3 bg-primary shine border-0"){
         let token = localStorage.getItem("token");
         for(let i=1; i < cartData.length+1; i++){
             axios.delete(`http://localhost:3000/600/carts/${i}`, {

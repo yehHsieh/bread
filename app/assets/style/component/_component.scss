@@ -30,7 +30,7 @@
     width: 33.33%;
     position: relative;
     text-align: center;
-
+    z-index: 0;
     &::before {
         content: counter(step);
         counter-increment: step;
@@ -53,6 +53,7 @@
         background-color: #ddd;
         top: 15px;
         left: -50%;
+        z-index: -1;
     }
 
     &:first-child::after {
