@@ -57,11 +57,11 @@ function render() {
 }
 
 // 刪除購物車內容
-cartArea2.addEventListener("click", e =>{
+cartArea2.addEventListener("click", e => {
     let finishBtn = e.target.getAttribute("class");
-    if(finishBtn == "finishBtn rounded-pill px-4 py-3 bg-primary shine border-0"){
+    if (finishBtn == "finishBtn rounded-pill px-4 py-3 bg-primary shine border-0") {
         let token = localStorage.getItem("token");
-        for(let i=1; i < cartData.length+1; i++){
+        for (let i = 1; i < cartData.length + 1; i++) {
             axios.delete(`http://localhost:3000/600/carts/${i}`, {
                 headers: {
                     "authorization": `Bearer ${token}`
@@ -72,7 +72,7 @@ cartArea2.addEventListener("click", e =>{
                 console.log(error.response)
             })
         }
-        window.location.href="./index.html"
+        window.location.href = "./index.html"
     }
 })
 
@@ -133,7 +133,7 @@ let orderDataTime = time.toLocaleDateString();
 const sendOrder = document.querySelector(".sendOrder");
 sendOrder.addEventListener("click", e => {
     localStorage.setItem("userName", cartData[0].user.name)
-let userName = localStorage.getItem("userName");
+    let userName = localStorage.getItem("userName");
 
     let showPickTime = localStorage.getItem("pickTime");
     let pay = localStorage.getItem("shouldPay");
@@ -151,13 +151,13 @@ let userName = localStorage.getItem("userName");
         }
     })
         .then(function (response) {
-            Swal.fire("成功送出訂單","", "success")
-            .then(function(){
-                render();
-            })
+            Swal.fire("成功送出訂單", "", "success")
+                .then(function () {
+                    render();
+                })
         })
         .catch(function (error) {
-            Swal.fire("購物車空的","", "success")
+            Swal.fire("購物車空的", "", "success")
             console.log(error.response)
         })
 })
@@ -165,10 +165,18 @@ let userName = localStorage.getItem("userName");
 
 // 日曆
 function date() {
+    let closeTime = new Date(JSON.parse(localStorage.getItem("timeValue"))).toString();
+    var date = new Date(closeTime);
+    var minDate = date.setDate(date.getDate() + 1)
+    var maxDate = date.setDate(date.getDate() + 2);
+
     const elem = document.querySelector('input[name="inputDate"]');
     const datepicker = new Datepicker(elem, {
         // ...options
         language: 'zh-TW',
         buttonClass: 'btn',
+        minDate: minDate,
+        maxDate: maxDate,
+        autohide: true,
     });
 }
