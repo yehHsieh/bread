@@ -93,3 +93,11 @@ $pixel in $grid-breakpoints {
 .left-25{
     left: 25% !important;
 }
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+
+.opacity-0{
+    opacity: 0;
+}

@@ -282,21 +282,25 @@ function cartNumRender(item) {
 
 function handleTickInit(tick) {
     // get timer offset (if not found, set to today)
-    var offset = new Date(localStorage.getItem('countdown-offset') || new Date());
+    let closeTime = new Date(JSON.parse(localStorage.getItem("timeValue"))).toString();
+    var offset = new Date(closeTime || new Date());
+
+    // var offset = new Date(localStorage.getItem('countdown-offset') || new Date());
 
     // store the offset (not really necessary but saves some if statements)
-    localStorage.setItem('countdown-offset', offset);
+    // localStorage.setItem('countdown-offset', offset);
 
     // time in hours the timer will run down
-    let closeTime = localStorage.getItem("timeValue");
-    var timeDuration = Tick.helper.duration(1, 'day');
+
+    var timeDuration = Tick.helper.duration(0, 'days');
     console.log(closeTime)
     console.log(timeDuration)
 
     // add 24 hours to get final deadline
+
     var deadline = new Date(offset.setMilliseconds(offset.getMilliseconds() + timeDuration));
-    
-console.log(deadline)
+
+    console.log(deadline)
     // create counter
     var counter = Tick.count.down(deadline, { format: ['h', 'm', 's'] });
 

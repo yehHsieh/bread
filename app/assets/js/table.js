@@ -98,7 +98,7 @@ const timeInput = document.querySelector(".timeInput");
 timeSet.addEventListener("click", e =>{
     e.preventDefault();
     localStorage.setItem("timeValue",timeInput.value);
-    // handleTickInit(tick);
+    Swal.fire("訂單關閉時間已調整", "", "success")
 })
 
 

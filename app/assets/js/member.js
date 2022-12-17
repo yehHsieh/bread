@@ -256,7 +256,9 @@ memberPage.addEventListener("click", e => {
     }
 
     else if (getId == "logout") {
-        localStorage.clear()
+        localStorage.removeItem('id');
+        localStorage.removeItem('token');
+        localStorage.removeItem('isAdmin');
         window.location.href = "./index.html"
     }
 

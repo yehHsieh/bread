@@ -1,5 +1,6 @@
 // const e = require("express");
 
+
 $(function () {
   console.log('Hello Bootstrap5');
 });
@@ -157,22 +158,16 @@ srollTL2.to(".dot", { y: "100",});
 
 
 
-
-
-// pin
-const srollTL3 = gsap.timeline({
-  scrollTrigger: {
-    
-    markers: true,
-    start: 'top top', // 決定動畫開始點的位置
-    end: 'top 8%', // 決定動畫結束點的位置
-    scrub: true,
-  },
+// 吃麵包動畫
+const tween = TweenMax.to('.test', {
+  duration: 1,
+  stagger: 0.5,
+  repeat:-1,
+  repeatDelay: 0.5,
+  yoyo: true,
+  opacity:1,
+  rotate:70,   
+  y(index, target) {
+    return index * 30;
+  }
 });
-
-srollTL.to(".gate-left-1", { yPercent: "-100" });
-srollTL.to(".gate-right-1", { yPercent: "100" }, "<");
-srollTL.to(".gate-left-2", { yPercent: "-100" });
-srollTL.to(".gate-right-2", { yPercent: "100" }, "<");
-
-

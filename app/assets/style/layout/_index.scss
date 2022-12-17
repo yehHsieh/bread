@@ -244,22 +244,22 @@
 
 .tick-flip,
 .tick-text-inline {
-  font-size: .8em;
+  // font-size: .5em;
 }
 
 .tick-label {
   // margin-top: 1em;
-  font-size: .8em;
+  font-size: 1em;
 }
 
 .tick-char {
-  width: 1.5em;
+  width: .5em;
 }
 
 .tick-text-inline {
   display: inline-block;
   text-align: center;
-  min-width: 1em;
+  min-width: .5em;
 }
 
 .tick-text-inline+.tick-text-inline {
