@@ -9,7 +9,7 @@ function init() {
 
 let orderData = [];
 function getOrderData() {
-    axios.get(`http://localhost:3000/orders?_expand=user`)
+    axios.get(`${api_path}/orders?_expand=user`)
         .then(function (response) {
             orderData = response.data;
             render();
@@ -59,7 +59,7 @@ function change(status, id) {
         newStatus = true;
     }
 
-    axios.patch(`http://localhost:3000/orders/${id}`,
+    axios.patch(`${api_path}/orders/${id}`,
         {
             "status": newStatus
         })

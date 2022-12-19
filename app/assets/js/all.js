@@ -44,7 +44,7 @@ cartNav.addEventListener("click", e => {
 function getUserIndexData() {
   let token = localStorage.getItem("token");
   let id = localStorage.getItem("id");
-  axios.get(`http://localhost:3000/600/users/${id}`, {
+  axios.get(`${api_path}/600/users/${id}`, {
     headers: {
       "authorization": `Bearer ${token}`
     }
@@ -66,7 +66,7 @@ function getUserIndexData() {
 function getLoginData() {
   let token = localStorage.getItem("token");
   let id = localStorage.getItem("id");
-  axios.get(`http://localhost:3000/600/users/${id}`, {
+  axios.get(`${api_path}/600/users/${id}`, {
     headers: {
       "authorization": `Bearer ${token}`
     }
@@ -86,7 +86,7 @@ function getLoginData() {
 function getCartData() {
   let token = localStorage.getItem("token");
   let id = localStorage.getItem("id");
-  axios.get(`http://localhost:3000/600/users/${id}`, {
+  axios.get(`${api_path}/600/users/${id}`, {
     headers: {
       "authorization": `Bearer ${token}`
     }

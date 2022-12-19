@@ -43,7 +43,7 @@ let envOptions = {
     src: [
       `${srcPath}/assets/js/**/*.js`,
       // `!${srcPath}/assets/js/index.js`,
-    // `!${srcPath}/assets/js/admin.js`,
+      // `!${srcPath}/assets/js/admin.js`,
       `!${srcPath}/assets/js/register.js`,
       `!${srcPath}/assets/js/reserve.js`,
       `!${srcPath}/assets/js/cart.js`,
@@ -58,7 +58,7 @@ let envOptions = {
   copyJSFile: {
     src: [
       // `!${srcPath}/assets/js/index.js`,
-    // `!${srcPath}/assets/js/admin.js`,
+      // `!${srcPath}/assets/js/admin.js`,
       `${srcPath}/assets/js/register.js`,
       `${srcPath}/assets/js/reserve.js`,
       `${srcPath}/assets/js/cart.js`,

@@ -35,7 +35,7 @@ function combineStr() {
 let orderData = [];
 let token = localStorage.getItem("token");
 let userId = localStorage.getItem("id");
-axios.get(`http://localhost:3000/600/orders?userId=${userId}&_expand=user`, {
+axios.get(`${api_path}/600/orders?userId=${userId}&_expand=user`, {
     headers: {
         "authorization": `Bearer ${token}`
     }
@@ -62,7 +62,7 @@ cartArea2.addEventListener("click", e => {
     if (finishBtn == "finishBtn rounded-pill px-4 py-3 bg-primary shine border-0") {
         let token = localStorage.getItem("token");
         for (let i = 1; i < cartData.length + 1; i++) {
-            axios.delete(`http://localhost:3000/600/carts/${i}`, {
+            axios.delete(`${api_path}/600/carts/${i}`, {
                 headers: {
                     "authorization": `Bearer ${token}`
                 }
@@ -96,16 +96,19 @@ datepickerPicker.addEventListener("click", e => {
 // 取購物車資料
 let cartData = [];
 
-axios.get(`http://localhost:3000/carts?_expand=product&_expand=user&userId=${userId}`, {
-    headers: {
-        "authorization": `Bearer ${token}`
-    }
-})
-    .then(function (response) {
-        cartData = response.data;
-        makeOrder();
+function grtCartData(){
+    axios.get(`${api_path}/carts?_expand=product&_expand=user&userId=${userId}`, {
+        headers: {
+            "authorization": `Bearer ${token}`
+        }
     })
+        .then(function (response) {
+            cartData = response.data;
+            makeOrder();
+        })
+}
 
+grtCartData()
 
 
 
@@ -130,36 +133,39 @@ let time = new Date();
 let orderDataTime = time.toLocaleDateString();
 
 
-const sendOrder = document.querySelector(".sendOrder");
-sendOrder.addEventListener("click", e => {
-    localStorage.setItem("userName", cartData[0].user.name)
-    let userName = localStorage.getItem("userName");
 
-    let showPickTime = localStorage.getItem("pickTime");
-    let pay = localStorage.getItem("shouldPay");
-    axios.post(`http://localhost:3000/600/orders?userId=${userId}&_expand=user`, {
-        // API格式
-        "userId": userId,
-        "pickDate": showPickTime,
-        "orderDate": orderDataTime,
-        "totalPrice": pay,
-        "products": orderProduct,
-        "status": false
-    }, {
-        headers: {
-            "authorization": `Bearer ${token}`
-        }
-    })
-        .then(function (response) {
-            Swal.fire("成功送出訂單", "", "success")
-                .then(function () {
-                    render();
-                })
+cartArea2.addEventListener("click", e => {
+    let sendBtn = e.target.getAttribute("class");
+    if(sendBtn == "btn btn-light shine border-0"){
+        localStorage.setItem("userName", cartData[0].user.name)
+        let userName = localStorage.getItem("userName");
+    
+        let showPickTime = localStorage.getItem("pickTime");
+        let pay = localStorage.getItem("shouldPay");
+        axios.post(`${api_path}/600/orders?userId=${userId}&_expand=user`, {
+            // API格式
+            "userId": userId,
+            "pickDate": showPickTime,
+            "orderDate": orderDataTime,
+            "totalPrice": pay,
+            "products": orderProduct,
+            "status": false
+        }, {
+            headers: {
+                "authorization": `Bearer ${token}`
+            }
         })
-        .catch(function (error) {
-            Swal.fire("購物車空的", "", "success")
-            console.log(error.response)
-        })
+            .then(function (response) {
+                Swal.fire("成功送出訂單", "", "success")
+                    .then(function () {
+                        render();
+                    })
+            })
+            .catch(function (error) {
+                Swal.fire("購物車空的", "", "success")
+                console.log(error.response)
+            })
+    }
 })
 
 

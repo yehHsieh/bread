@@ -81,7 +81,7 @@ const registerBtn = document.querySelector("#registerBtn");
 
 registerBtn.addEventListener("click", e => {
   if (password.value === passwordCheck.value) {
-    axios.post(`http://localhost:3000/signup`, {
+    axios.post(`${api_path}/signup`, {
       "name": userName.value,
       "tel": tel.value,
       "email": email.value,
@@ -111,7 +111,7 @@ let memberData = [];
 function getUserData() {
   let token = localStorage.getItem("token");
   let id = localStorage.getItem("id");
-  axios.get(`http://localhost:3000/600/users/${id}`, {
+  axios.get(`${api_path}/600/users/${id}`, {
     headers: {
       "authorization": `Bearer ${token}`
     }
@@ -138,7 +138,7 @@ registerArea.addEventListener("click", e => {
     getUserData()
     const loginAccount = document.querySelector("#loginAccount");
 const loginPassword = document.querySelector("#loginPassword");
-    axios.post(`http://localhost:3000/login`, {
+    axios.post(`${api_path}/login`, {
       "email": loginAccount.value,
       "password": loginPassword.value,
     })

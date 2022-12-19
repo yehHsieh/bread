@@ -12,7 +12,7 @@ addProduct.addEventListener("click", e => {
     const content = addContent.value;
     const source = addSource.value;
     const imgur = addImgur.value;
-    axios.post(`http://localhost:3000/products`, {
+    axios.post(`${api_path}/products`, {
         "imgur": imgur,
         "price": price,
         "breadName": name,
@@ -43,7 +43,7 @@ tableBody.addEventListener("click", e => {
         confirmButtonText: 'Sure?'
     }).then((result) => {
         if (result.isConfirmed) {
-            axios.delete(`http://localhost:3000/products/${deleteProduct}`)
+            axios.delete(`${api_path}/products/${deleteProduct}`)
         .then(function (response) {
             Swal.fire("商品刪除成功", "", "success")
                 .then(e => {
@@ -67,7 +67,7 @@ tableBody.addEventListener("click", e => {
 
     let productData = [];
     function getProductData() {
-        axios.get(`http://localhost:3000/products`)
+        axios.get(`${api_path}/products`)
             .then(function (response) {
                 productData = response.data;
                 render();

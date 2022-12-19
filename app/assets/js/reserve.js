@@ -9,7 +9,7 @@ let cartData = [];
 function getCartsData() {
     let token = localStorage.getItem("token");
     let userId = localStorage.getItem("id");
-    axios.get(`http://localhost:3000/600/carts?_expand=product&userId=${userId}`, {
+    axios.get(`${api_path}/600/carts?_expand=product&userId=${userId}`, {
         headers: {
             "authorization": `Bearer ${token}`
         }
@@ -27,7 +27,7 @@ const productPage = document.querySelector("#productPage");
 const breadArea = document.querySelector(".breadArea");
 let productData = [];
 function getProductList() {
-    axios.get(`http://localhost:3000/products`)
+    axios.get(`${api_path}/products`)
         .then(function (response) {
             productData = response.data;
             render();
@@ -117,7 +117,7 @@ productPage.addEventListener("click", e => {
                     Swal.fire("還沒選數量喔", "", "warning")
                     return
                 } else {
-                    axios.post(`http://localhost:3000/600/carts?userId=${userId}&_expand=user`, {
+                    axios.post(`${api_path}/600/carts?userId=${userId}&_expand=user`, {
                         // API格式
                         "userId": userId,
                         "productId": item.id,
@@ -243,7 +243,7 @@ productPage.addEventListener("click", e => {
                 Swal.fire("還沒選數量喔", "", "warning")
                 return
             } else {
-                axios.post(`http://localhost:3000/600/carts?userId=${userId}&_expand=user`, {
+                axios.post(`${api_path}/600/carts?userId=${userId}&_expand=user`, {
                     // API格式
                     "userId": userId,
                     "productId": item.id,

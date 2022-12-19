@@ -13,7 +13,7 @@ let memberData = [];
 function getUserData() {
     let token = localStorage.getItem("token");
     let id = localStorage.getItem("id");
-    axios.get(`http://localhost:3000/600/users/${id}`, {
+    axios.get(`${api_path}/600/users/${id}`, {
         headers: {
             "authorization": `Bearer ${token}`
         }
@@ -41,7 +41,7 @@ let orderData = [];
 function getOrderData() {
     let token = localStorage.getItem("token");
     let id = localStorage.getItem("id");
-    axios.get(`http://localhost:3000/600/orders?userId=${id}`, {
+    axios.get(`${api_path}/600/orders?userId=${id}`, {
         headers: {
             "authorization": `Bearer ${token}`
         }
@@ -110,6 +110,7 @@ function renderOrder() {
                                     <ul>`;
 
         // 訂購組商品字串
+        productStr = "";
         item.products.forEach(productItem => {
             productStr += `     
                                 <li>品名:${productItem.name}</li>
@@ -268,7 +269,7 @@ memberPage.addEventListener("click", e => {
             e.preventDefault();
             let token = localStorage.getItem("token");
             let id = localStorage.getItem("id");
-            axios.patch(`http://localhost:3000/600/users/${id}`, {
+            axios.patch(`${api_path}/600/users/${id}`, {
                 "email": emailChange.value,
                 "password": passwordChange.value,
                 "name": nameChange.value,

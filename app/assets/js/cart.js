@@ -8,7 +8,7 @@ const cartArea = document.querySelector("#cartArea");
 // 刪除單項
 cartArea.addEventListener("click", e => {
     const deleteId = e.target.getAttribute("data-delete");
-    axios.delete(`http://localhost:3000/carts/${deleteId}`).then(function (response) {
+    axios.delete(`${api_path}/carts/${deleteId}`).then(function (response) {
         Swal.fire("刪除成功!","", "success");
         getCartList();
     })
@@ -24,7 +24,7 @@ cartArea.addEventListener("click", e => {
     cartData.forEach(item => {
         if (plus == item.id) {
             item.num += 1;
-            axios.patch(`http://localhost:3000/carts/${plus}`, {
+            axios.patch(`${api_path}/carts/${plus}`, {
                 "num": item.num
             })
         } else if (minus == item.id) {
@@ -34,7 +34,7 @@ cartArea.addEventListener("click", e => {
                 item.num = 1;
                 return
             } else {
-                axios.patch(`http://localhost:3000/carts/${minus}`, {
+                axios.patch(`${api_path}/carts/${minus}`, {
                     "num": item.num
                 })
             }
@@ -118,7 +118,7 @@ let cartData = [];
 function getCartList() {
     let token = localStorage.getItem("token");
     let userId = localStorage.getItem("id");
-    axios.get(`http://localhost:3000/600/carts?_expand=product&userId=${userId}`, {
+    axios.get(`${api_path}/600/carts?_expand=product&userId=${userId}`, {
         headers: {
             "authorization": `Bearer ${token}`
         }
