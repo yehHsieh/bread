@@ -8,11 +8,14 @@
   <title>
     Table
   </title>
+  <!-- AOS動畫 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--  -->
   <!-- swiper -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!--  -->
+  <!-- 倒數 -->
+  <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
   <!--  -->
   <!-- 日曆 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
@@ -21,13 +24,14 @@
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg py-0 sticky-top d-flex justify-content-between px-5 nav-color">
     <div class="py-3 py-lg-4 navheader d-flex align-items-center">
       <h1 class="mb-0">
-        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+        <a class="navbar-brand me-0 py-0" href="index.html"><img src="./assets/images/麵包圖/logo2.png" alt="logo"
+            style="width: 60px; height: 60px;"></a>
       </h1>
-      
+
       <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
         id="menu-check" />
@@ -46,65 +50,91 @@
     <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav border-top text-center fw-bold">
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="index.html">首頁
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="register.html"
+            id="loginNav">註冊/登入
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="member.html"
+            id="memberCenter">會員中心
           </a>
         </li>
         <li class="nav-item border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="cart.html" id="cartNav"><i
+              class="fa fa-shopping-cart me-1" aria-hidden="true"></i></a>
         </li>
-
       </ul>
-
     </div>
   </nav>
 
 
   <div class="bg-dark py-4 py-lg-80p">
   <div class="container">
-    <ul class="nav">
+    <ul class="nav mb-3">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="table.html">上架商品</a>
+        <a class="nav-link active border-bottom border-primary" aria-current="page" href="table.html">上架商品</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="result.html">訂單列表</a>
       </li>
     </ul>
     
-    <table class="table table-dark table-striped ">
+
+    <form class="pt-3 mb-3">
+      <label>關閉定單:</label>
+      <input type="number" value="1671356220000" class="timeInput" placeholder="1671356220000">
+      <button class="btn btn-primary" id="timeSet">SURE</button>
+    </form>
+
+
+    <table class="table table-dark table-striped">
       <thead>
         <tr>
           <th scope="col">品項</th>
           <th scope="col">品名</th>
-          <th scope="col">數量</th>
+          <th scope="col">價格</th>
+          <th scope="col">描述</th>
+          <th scope="col">原料</th>
           <th scope="col">圖片</th>
+          <th scope="col"></th>
+        </tr>
+        <tr>
+          <th scope="row">#</th>
+          <td><input type="text" placeholder="歐式麵包" class="addBreadName d-inline-block" style="width: 120px;">
+          </td>
+          <td><input type="number" placeholder="90" class="addPrice" style="width: 50px;"></td>
+          <td><input type="text" placeholder="利用低溫發酵，帶有嚼勁、彈牙口感" class="addContent" style="width: 280px;">
+            <td><input type="text" placeholder="蛋、香草、麵粉" class="addSource" style="width: 200px;">
+          <td><input type="text" value="https://raw.githubusercontent.com/yehHsieh/bread/main/app/assets/images/%E9%BA%B5%E5%8C%85%E5%9C%96/bread1.jpg" placeholder="https://raw.githubusercontent.com/yehHsieh/bread/main/app/assets/images/%E9%BA%B5%E5%8C%85%E5%9C%96/bread1.jpg" class="addImgur"></td>
+          <td><button class="btn btn-primary addProduct">新增</button></td>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="tableBody">
         <tr>
           <th scope="row">1</th>
-          <td><input type="text" value="歐式麵包">
-          </td>
-          <td><input type="number" value="5"></td>
-          <td><input type="text" value="http://www.werwgdbod.ewr"></td>
+          <td>歐式麵包</td>
+          <td>90</td>
+          <td>利用低溫發酵，帶有嚼勁、彈牙口感</td>
+          <td>蛋、麵粉、牛奶、植物油</td>
+          <td><img src="https://raw.githubusercontent.com/yehHsieh/bread/main/app/assets/images/%E9%BA%B5%E5%8C%85%E5%9C%96/laura-filip-W0PDHT_sYoQ-unsplash.jpg" alt="bread" style="height: 55px;"></td>
+          <td><button class="btn btn-light deleteProduct">刪除</button></td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>歐式麵包</td>
+          <td>90</td>
+          <td>利用低溫發酵，帶有嚼勁、彈牙口感</td>
+          <td>蛋、麵粉、牛奶、植物油</td>
+          <td><img src="https://raw.githubusercontent.com/yehHsieh/bread/main/app/assets/images/%E9%BA%B5%E5%8C%85%E5%9C%96/laura-filip-W0PDHT_sYoQ-unsplash.jpg" alt="bread" style="height: 55px;"></td>
+          <td><button class="btn btn-light">刪除</button></td>
         </tr>
       </tbody>
     </table>
@@ -113,7 +143,9 @@
 
     <footer class="footer bg-secondary py-2">
       <div class="container text-center d-lg-flex justify-content-between align-items-center">
-        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <a href="index.html">
+          <h2 class="m-0"><img src="./assets/images/麵包圖/logo2.png" alt="logo" style="width: 50px; height: 50px;"></h2>
+        </a>
         <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
         <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
           <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -123,14 +155,44 @@
       </div>
     </footer>
 
+    <!-- sweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <!-- 日曆 -->
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <!-- 倒數 -->
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
+    <!-- C3 D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+
+    <!-- 
+    <script>const api_path = "https://json-server-vercel-topaz.vercel.app";</script> -->
+
+    <!-- <script>
+      const api_path = "http://localhost:3000";
+    </script> -->
+
+    <script>const api_path = "https://render-agk5.onrender.com";</script>
+
+    <script src="./assets/js/table.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 

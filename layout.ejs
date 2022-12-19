@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>
-    member
+    <%- title %>
   </title>
   <!-- AOS動畫 -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -76,89 +76,7 @@
   </nav>
 
 
-  
-<div class="bg-dark py-4 py-lg-80p">
-    <div class="container">
-        <div class="row memberPage">
-            <h2>會員中心</h2>
-            <div class="col-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true" id="baseData">
-                        基本資料
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action" id="memberOrder">已完成訂單</a>
-                    <a href="#" class="list-group-item list-group-item-action" id="changeMember">會員資料修改</a>
-                  </div>
-            </div>
-            <div class="col-9">
-                <div class="bg-white p-4 rounded-3">
-                    <ul class="text-secondary">
-                        <li>姓名 : 王小美</li>
-                        <li>電話 : 0913131411</li>
-                        <li>信箱 : ertgdgx@gmail.com</li>
-                    </ul>
-
-                    <div class="row text-secondary py-4">
-                        <div class="col-lg-3">
-                           <p>#1</p>
-                        </div>
-                        <div class="col-lg-8">
-                            <ul>
-                                <li>歐式麵包</li>
-                                <li>數量 : 1</li>
-                                <li>取貨日期 : 2022-12-25</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-1 align-self-center">
-                            <p>$90</p>
-                        </div>
-                    </div>
-
-                    <div class="row text-secondary border-top py-4">
-                        <div class="col-lg-3">
-                            <img src="./assets/images/麵包圖/bread7.jpg" alt="bread7">
-                        </div>
-                        <div class="col-lg-8">
-                            <ul>
-                                <li>歐式麵包</li>
-                                <li>數量 : 1</li>
-                                <li>取貨日期 : 2022-12-25</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-1 align-self-center">
-                            <p>$90</p>
-                        </div>
-                    </div>
-                    <form action="#" class="text-secondary">
-                        <label for="name" class="me-6">姓名:</label>
-                        <input type="text" name="name" id="name" placeholder="name">
-                        <br>
-                        <label class="me-6" for="tel">電話:</label>
-                        <input type="tel" name="tel" id="tel" placeholder="tel">
-                        <br>
-                        <label class="me-6" for="email">信箱:</label>
-                        <input type="email" name="email" id="email" placeholder="email">
-                        <br>
-                        <label class="me-6" for="account">帳號:</label>
-                        <input type="text" name="account" id="account" placeholder="account">
-                        <br>
-                        <label class="me-6" for="password">密碼:</label>
-                        <input type="password" name="password" id="password" placeholder="password">
-                        <br>
-                        <label for="passwordCheck">密碼確認:</label>
-                        <input type="password" name="passwordCheck" id="passwordCheck" placeholder="passwordCheck">
-
-                        <!-- Button trigger modal -->
-                        <input type="submit" class="btn btn-primary d-block" value="確認" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                        </input>
-</form>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  <%- contents %>
 
     <footer class="footer bg-secondary py-2">
       <div class="container text-center d-lg-flex justify-content-between align-items-center">
@@ -211,7 +129,7 @@
 
     <script>const api_path = "https://render-agk5.onrender.com";</script>
 
-    <script src="./assets/js/member.js"></script>
+    <script src="./assets/js/<%- current %>.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 

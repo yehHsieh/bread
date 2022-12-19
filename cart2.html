@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>
-    member
+    Cart2
   </title>
   <!-- AOS動畫 -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -77,83 +77,49 @@
 
 
   
-<div class="bg-dark py-4 py-lg-80p">
-    <div class="container">
-        <div class="row memberPage">
-            <h2>會員中心</h2>
-            <div class="col-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true" id="baseData">
-                        基本資料
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action" id="memberOrder">已完成訂單</a>
-                    <a href="#" class="list-group-item list-group-item-action" id="changeMember">會員資料修改</a>
-                  </div>
-            </div>
-            <div class="col-9">
-                <div class="bg-white p-4 rounded-3">
-                    <ul class="text-secondary">
-                        <li>姓名 : 王小美</li>
-                        <li>電話 : 0913131411</li>
-                        <li>信箱 : ertgdgx@gmail.com</li>
-                    </ul>
+<div class="bg-dark py-4">
+    <div class="container" id="cartArea2" style="height: 100vh;">
+        <h2 class="m-0">購物車</h2>
+        <!-- 步驟圖 -->
+        <!-- <ul class="row justify-content-between m-0">
 
-                    <div class="row text-secondary py-4">
-                        <div class="col-lg-3">
-                           <p>#1</p>
-                        </div>
-                        <div class="col-lg-8">
-                            <ul>
-                                <li>歐式麵包</li>
-                                <li>數量 : 1</li>
-                                <li>取貨日期 : 2022-12-25</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-1 align-self-center">
-                            <p>$90</p>
-                        </div>
-                    </div>
+            <li class="rounded-circle bg-secondary d-flex align-items-center justify-content-center fs-lg-2 p-0"
+                style="width: 64px; height: 64px">1</li>
 
-                    <div class="row text-secondary border-top py-4">
-                        <div class="col-lg-3">
-                            <img src="./assets/images/麵包圖/bread7.jpg" alt="bread7">
-                        </div>
-                        <div class="col-lg-8">
-                            <ul>
-                                <li>歐式麵包</li>
-                                <li>數量 : 1</li>
-                                <li>取貨日期 : 2022-12-25</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-1 align-self-center">
-                            <p>$90</p>
-                        </div>
-                    </div>
-                    <form action="#" class="text-secondary">
-                        <label for="name" class="me-6">姓名:</label>
-                        <input type="text" name="name" id="name" placeholder="name">
-                        <br>
-                        <label class="me-6" for="tel">電話:</label>
-                        <input type="tel" name="tel" id="tel" placeholder="tel">
-                        <br>
-                        <label class="me-6" for="email">信箱:</label>
-                        <input type="email" name="email" id="email" placeholder="email">
-                        <br>
-                        <label class="me-6" for="account">帳號:</label>
-                        <input type="text" name="account" id="account" placeholder="account">
-                        <br>
-                        <label class="me-6" for="password">密碼:</label>
-                        <input type="password" name="password" id="password" placeholder="password">
-                        <br>
-                        <label for="passwordCheck">密碼確認:</label>
-                        <input type="password" name="passwordCheck" id="passwordCheck" placeholder="passwordCheck">
+            <li class="rounded-circle bg-light d-flex align-items-center justify-content-center fs-lg-2 p-0 line"
+                style="width: 64px; height: 64px">2</li>
 
-                        <!-- Button trigger modal -->
-                        <input type="submit" class="btn btn-primary d-block" value="確認" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                        </input>
-</form>
+            <li class="rounded-circle bg-light d-flex align-items-center justify-content-center fs-lg-2 p-0"
+                style="width: 64px; height: 64px">3</li>
 
+
+        </ul> -->
+
+        <ul class="progresses m-0 d-flex">
+            <li>step1</li>
+            <li class="active">step2</li>
+            <li>step3</li>
+        </ul>
+
+        <!-- 購物車內容 -->
+        <!-- part2取貨日期 -->
+        <div class="d-flex py-4">
+            <p class="me-4">取貨日期 :</p>
+            <input type="text" name="inputDate" class="datePick">
+        </div>
+        <p>*溫馨提醒 : 為了麵包新鮮度，務必選擇出爐日期後三日內領取</p>
+
+
+        <!-- 確認區 -->
+
+        <div class="bg-secondary p-4 mt-120p">
+            <!-- part2 -->
+            <div class="d-flex justify-content-between">
+                <p class="m-0 dateShow">領取日期 : </p>
+                <div>
+                    <a href="./cart.html" class="btn btn-light">上一步</a>
+                    <a class="btn btn-light shine border-0">送出訂單</a>
+                    <!-- <input type="button" value="送出訂單" class="sendOrder"> -->
                 </div>
             </div>
         </div>
@@ -211,7 +177,7 @@
 
     <script>const api_path = "https://render-agk5.onrender.com";</script>
 
-    <script src="./assets/js/member.js"></script>
+    <script src="./assets/js/cart2.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 

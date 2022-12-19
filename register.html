@@ -8,11 +8,14 @@
   <title>
     Register
   </title>
+  <!-- AOS動畫 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--  -->
   <!-- swiper -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!--  -->
+  <!-- 倒數 -->
+  <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
   <!--  -->
   <!-- 日曆 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
@@ -21,13 +24,14 @@
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg py-0 sticky-top d-flex justify-content-between px-5 nav-color">
     <div class="py-3 py-lg-4 navheader d-flex align-items-center">
       <h1 class="mb-0">
-        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+        <a class="navbar-brand me-0 py-0" href="index.html"><img src="./assets/images/麵包圖/logo2.png" alt="logo"
+            style="width: 60px; height: 60px;"></a>
       </h1>
-      
+
       <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
         id="menu-check" />
@@ -46,105 +50,185 @@
     <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav border-top text-center fw-bold">
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="index.html">首頁
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="register.html"
+            id="loginNav">註冊/登入
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="member.html"
+            id="memberCenter">會員中心
           </a>
         </li>
         <li class="nav-item border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="cart.html" id="cartNav"><i
+              class="fa fa-shopping-cart me-1" aria-hidden="true"></i></a>
         </li>
-
       </ul>
-
     </div>
   </nav>
 
 
-  <div class="bg-dark">
-    <div class="container">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">註冊</a>
+  <div class="bg-dark pt-120p">
+    <div class="container position-relative">
+        <!-- <ul class="nav nav-tabs row border-0">
+            <div class="col-md-3 offset-3 g-0">
+                <li class="nav-item bg-secondary">
+                    <a class="nav-link active register text-center" aria-current="page" href="#">註冊</a>
 
-                <div class="register">
-                    <form action="#">
-                        <label for="name" class="me-6">姓名:</label>
-                        <input type="text" name="name" id="name" placeholder="name">
-                        <br>
-                        <label class="me-6" for="tel">電話:</label>
-                        <input type="tel" name="tel" id="tel" placeholder="tel">
-                        <br>
-                        <label class="me-6" for="email">信箱:</label>
-                        <input type="email" name="email" id="email" placeholder="email">
-                        <br>
-                        <label class="me-6" for="account">帳號:</label>
-                        <input type="text" name="account" id="account" placeholder="account">
-                        <br>
-                        <label class="me-6" for="password">密碼:</label>
-                        <input type="password" name="password" id="password" placeholder="password">
-                        <br>
-                        <label for="passwordCheck">密碼確認:</label>
-                        <input type="password" name="passwordCheck" id="passwordCheck" placeholder="passwordCheck">
+                    <div class="registerTab p-3">
+                        <form action="#"> -->
+        <!-- <label for="name" class="me-6 mt-3">姓名:</label>
+                            <input type="text" name="name" id="userName" placeholder="name">
+                            <br>
+                            <label class="me-6 mt-3" for="tel">電話:</label>
+                            <input type="tel" name="tel" id="tel" placeholder="tel">
+                            <br>
+                            <label class="me-6 mt-3" for="email">信箱:</label>
+                            <input type="email" name="email" id="email" placeholder="email">
+                            <br>
+                            <!-- <label class="me-6 mt-3" for="account">帳號:</label>
+                            <input type="text" name="account" id="account" placeholder="account"> -->
+        <!-- <br> -->
+        <!-- <label class="me-6 mt-3" for="password">密碼:</label>
+                            <input type="password" name="password" id="password" placeholder="password">
+                            <br>
+                            <label for="passwordCheck" class="mt-3">密碼確認:</label>
+                            <input type="password" name="passwordCheck" id="passwordCheck" placeholder="passwordCheck">
 
-                        <!-- Button trigger modal -->
-                        <input type="submit" class="btn btn-primary d-block" value="確認" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                        </input>
+                            <!-- Button trigger modal -->
+        <!-- <input id="registerBtn" type="submit" class="btn btn-primary d-block mt-3" value="確認" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                            </input> -->
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content text-black-50">
-                                    <div class="modal-header border-0">
-                                        <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
-                                        <p>註冊成功</p>
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content text-black-50">
+                                        <div class="modal-header border-0">
+                                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                            <p>註冊成功</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> -->
 
-                    </form>
+        <!-- </form> -->
+        <!-- </div>
+                </li> -->
+        <!-- </div> -->
+        <!-- <div class="col-md-3 g-0">
+                <li class="nav-item bg-secondary">
+                    <a class="nav-link active loginBtn text-center" aria-current="page" href="#">登入</a> -->
+
+        <!-- <div class="loginTab d-none p-3">
+                        <form action="#">
+                            <label class="me-6 mt-3" for="loginAccount">信箱:</label>
+                            <input type="text" name="loginAccount" id="loginAccount" placeholder="account">
+                            <br>
+                            <label class="me-6 mt-3" for="loginPassword">密碼:</label>
+                            <input type="password" name="loginPassword" id="loginPassword" placeholder="password"
+                                class="d-block">
+                            <a id="loginBtn" class="btn btn-primary mt-3" href="./member.html">
+                                登入
+                            </a>
+                        </form>
+                    </div> -->
+        <!-- </li>
+            </div>
+
+        </ul> -->
+
+        <!-- 已登入 -->
+
+
+        <div class="registerArea">
+            <div class="login-box login-box1">
+                <div class="d-flex">
+                    <h2>Register</h2>
+                    <a href="#" class="btn ms-4 pt-3 changeBtn" style="height: 50px;">已是會員</a>
                 </div>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="" required="" id="userName">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="" required="" id="tel">
+                        <label>tel</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="email" name="" required="" id="email">
+                        <label>email</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="password">
+                        <label>password</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="passwordCheck">
+                        <label>passwordCheck</label>
+                    </div>
+                    <a href="#" id="registerBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Register
+                    </a>
+                </form>
+            </div>
 
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">登入</a>
 
-                <div class="login">
-                    <form action="#">
-                        <label class="me-6" for="account">帳號:</label>
-                        <input type="text" name="account" id="account" placeholder="account">
-                        <br>
-                        <label class="me-6" for="password">密碼:</label>
-                        <input type="password" name="password" id="password" placeholder="password">
-                        <a  class="btn btn-primary d-block" href="member.html">
-                            登入
-                        </a>
-                    </form>
+            <div class="login-box login-box2 d-none">
+                <div class="d-flex">
+                    <h2>Login</h2>
+                    <a href="#" class="btn ms-4 pt-3 changeBtn" style="height: 50px;">未註冊</a>
                 </div>
-            </li>
-        </ul>
+                <form>
+                    <div class="user-box">
+                        <input type="email" name="" required="" id="loginAccount">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="loginPassword">
+                        <label>Password</label>
+                    </div>
+                    <a href="#" id="loginBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Login
+                    </a>
+                </form>
+            </div>
+        </div>
+
+
+
+
     </div>
 </div>
 
-<a href="chief.html" class="btn btn-danger"></a>
-
     <footer class="footer bg-secondary py-2">
       <div class="container text-center d-lg-flex justify-content-between align-items-center">
-        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <a href="index.html">
+          <h2 class="m-0"><img src="./assets/images/麵包圖/logo2.png" alt="logo" style="width: 50px; height: 50px;"></h2>
+        </a>
         <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
         <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
           <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -154,14 +238,44 @@
       </div>
     </footer>
 
+    <!-- sweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <!-- 日曆 -->
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <!-- 倒數 -->
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
+    <!-- C3 D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+
+    <!-- 
+    <script>const api_path = "https://json-server-vercel-topaz.vercel.app";</script> -->
+
+    <!-- <script>
+      const api_path = "http://localhost:3000";
+    </script> -->
+
+    <script>const api_path = "https://render-agk5.onrender.com";</script>
+
+    <script src="./assets/js/register.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 

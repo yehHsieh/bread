@@ -8,11 +8,14 @@
   <title>
     Boostrap Index
   </title>
+  <!-- AOS動畫 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--  -->
   <!-- swiper -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!--  -->
+  <!-- 倒數 -->
+  <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
   <!--  -->
   <!-- 日曆 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
@@ -21,13 +24,14 @@
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg py-0 sticky-top d-flex justify-content-between px-5 nav-color">
     <div class="py-3 py-lg-4 navheader d-flex align-items-center">
       <h1 class="mb-0">
-        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+        <a class="navbar-brand me-0 py-0" href="index.html"><img src="./assets/images/麵包圖/logo2.png" alt="logo"
+            style="width: 60px; height: 60px;"></a>
       </h1>
-      
+
       <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
         id="menu-check" />
@@ -46,7 +50,44 @@
     <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav border-top text-center fw-bold">
         <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="index.html">首頁
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="register.html"
+            id="loginNav">註冊/登入
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="member.html"
+            id="memberCenter">會員中心
+          </a>
+        </li>
+        <li class="nav-item border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="cart.html" id="cartNav"><i
+              class="fa fa-shopping-cart me-1" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  
+<!-- Banner -->
+<div class="bg position-relative">
+    <!-- 下拉選單 -->
+    <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav border-top text-center fw-bold">
+        <li class="nav-item  border-bottom border-base py-lg-2">
           <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html" id="loginNav">註冊/登入
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
@@ -54,63 +95,79 @@
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="member.html" id="memberCenter">會員中心
           </a>
         </li>
         <li class="nav-item border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html" id="cartNav">購物車</a>
         </li>
-
       </ul>
-
     </div>
   </nav>
-
-
-  <!-- Banner -->
-<div class="bg">
   <div class="container d-flex justify-content-end align-items-end h-100 pb-120p">
-    <h2 class="arrow pe-7 border-bottom border-5 pb-1 fs-4 fs-lg-48p fw-bold overflow-hidden"><a href="#"
-        class="text-white">麵包學者 <br>
+    <h2 class="arrow pe-7 border-bottom border-5 pb-1 fs-4 fs-lg-3 fw-bold overflow-hidden"><a href="register.html"
+        class="text-white dot1">麵包學者 <br>
         吃得好由你來決定</a></h2>
   </div>
-</div>
+
+
+  <ul>
+    <li class="dot rounded-circle bg-primary position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-primary position-absolute " style="width: 3px; height: 4px;"></li>
+    <li class="dot rounded-circle bg-primary position-absolute" style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute" style="width: 5px; height: 7px;"></li>
+    <li class="dot rounded-circle bg-primary position-absolute " style="width: 4px; height: 3px;"></li>
+    <li class="dot rounded-circle bg-primary position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-primary position-absolute" style="width: 5px; height: 7px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 5px; height: 3px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute" style="width: 5px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute" style="width: 5px; height: 7px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 4px; height: 3px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute" style="width: 5px; height: 3px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 4px; height: 3px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute " style="width: 3px; height: 5px;"></li>
+    <li class="dot rounded-circle bg-white position-absolute" style="width: 5px; height: 3px;"></li>
+  </ul>
 
 <!-- About -->
 <div class="bg-dark position-relative">
   <div class="container py-4 py-lg-80p">
-    <h2 class="position-absolute top-0" style="transform: translateY(-50%);">About</h2>
+    <h2 class="position-absolute top-0" style="transform: translateY(-100%);">About</h2>
     <div class="row">
-      <div class="col-md-6">
-        <p>關於吃得好吃得健康，不
-          <br>
-          外乎就是少鹽少糖少油的
-          <br>
-          食物，但往往就是給人無
-          <br>
-          味無聊不好吃，那一定得
-          <br>
-          試試我們的麵包來打破你
-          <br>
-          的印象，加上本店採用特
-          <br>
-          殊低筋麵黺與新鮮直送雞
-          <br>
-          蛋，口感值得您來嘗試
+      <div class="col-md-6" data-aos="fade-right"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <p class="mb-5">關於吃得好吃得健康，不外乎就是少鹽少糖少油的食物，但往往就是給人無味無聊不好吃，
+        </p>
+        <p class="mb-5">
+          那一定得試試我們的麵包來打破你的印象，加上本店採用特殊高筋麵黺與新鮮直送雞蛋，口感值得您來嘗試。
+        </p>
+        <p>
+          由於師傅在乎客人購買的麵包新鮮度，採少量製作，不讓麵包過剩放置太久，因此本店採預約經營模式，將可讓師傅預先了解大約客戶需求量。
         </p>
       </div>
-      <div class="col-md-6">
-        <img src="./assets/images/麵包圖/lauren-gray-Zqh5l1JWs5M-unsplash.jpg" alt="egg" class="ratio-col">
+      <div class="col-md-4 offset-2 position-relative">
+        <img src="./assets/images/麵包圖/bag.png" alt="dot" class="test" style="width: 80px; height: 80px;">
+        <img src="./assets/images/麵包圖/breadA1.png" alt="dot" class="test me-4 opacity-0" style="width: 45px; height: 45px;">
+        <img src="./assets/images/麵包圖/breadA2.png" alt="dot" class="test me-4 opacity-0" style="width: 45px; height: 45px;">
+        <img src="./assets/images/麵包圖/breadA3.png" alt="dot" class="test me-4 opacity-0" style="width: 45px; height: 45px;">
+        <img src="./assets/images/麵包圖/mouth.png" alt="dot" style="width: 100px; height: 100px;" class="position-absolute end-0 top-50 rotate-45">
       </div>
     </div>
   </div>
   <!-- Swiper -->
   <div class="swiper mySwiper pb-5 pb-lg-6">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread1.jpg" alt="bread1"></div>
-      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread4.jpg" alt="bread4"></div>
-      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread5.jpg" alt="bread5"></div>
-      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread7.jpg" alt="bread7"></div>
+      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread1.jpg" class="rounded-3" alt="bread1"></div>
+      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread4.jpg" class="rounded-3" alt="bread4"></div>
+      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread5.jpg" class="rounded-3" alt="bread5"></div>
+      <div class="swiper-slide"><img src="./assets/images/麵包圖/bread7.jpg" class="rounded-3" alt="bread7"></div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -120,26 +177,60 @@
 <div class="bg-marble">
   <div class="container text-dark py-4 py-lg-80p py-lg-80p">
     <h2 class="fw-bold mb-4">預訂注意事項</h2>
-    <ul>
-      <li><img src="./assets/images/麵包圖/croissant.png" alt="croissant"
+    <ul data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+      <li class="pb-4"><img src="./assets/images/麵包圖/croissant.png" alt="croissant" class="me-3"
           style="width: 24px; height: 24px;">每週一將公告當週出爐麵包供預定</li>
-      <li><img src="./assets/images/麵包圖/croissant.png" alt="croissant"
+      <li class="pb-4"><img src="./assets/images/麵包圖/croissant.png" alt="croissant" class="me-3"
           style="width: 24px; height: 24px;">因麵包師傅須預先統計數量因此請於限定時間內預定</li>
-      <li><img src="./assets/images/麵包圖/croissant.png" alt="croissant"
+      <li class="pb-4"><img src="./assets/images/麵包圖/croissant.png" alt="croissant" class="me-3"
           style="width: 24px; height: 24px;">當數量到達一定數量，也將關閉訂購</li>
-      <li><img src="./assets/images/麵包圖/croissant.png" alt="croissant"
+      <li class="pb-4"><img src="./assets/images/麵包圖/croissant.png" alt="croissant" class="me-3"
           style="width: 24px; height: 24px;">除了預購外歡迎親臨本店選購其他商品</li>
     </ul>
   </div>
 </div>
 
+
+
+<!-- 畫面主要分為gate-left左邊與gate-right右邊元素，我們透過操作兩邊元素達到視差動畫效果 -->
+<section class="section3 position-relative d-flex overflow-hidden"  style="height: 65vh;">
+    <div class="start-0 gate-left-1 z-20 position-absolute d-flex justify-content-center align-items-center w-50 h-100">
+      <img src="./assets/images/麵包圖/browse.jpg" class="h-100 w-100" alt="browse">
+  </div>
+  <div class="position-absolute d-flex justify-content-center align-items-center w-50 h-100 end-0 gate-right-1 z-20">
+    <h3 class="fw-bold text-center">Step 1
+      <br> Browse
+    </h3>
+  </div>
+  <div class="position-absolute d-flex justify-content-center align-items-center w-50 h-100 start-0 gate-left-2 z-10">
+    <img src="./assets/images/麵包圖/register-2819608_1280.jpg" alt="register" class="h-100 w-100 image-cover">
+  </div>
+  <div class="position-absolute d-flex justify-content-center align-items-center w-50 h-100 end-0 gate-right-2 z-10">
+    <h3 class="fw-bold text-center">Step 2
+      <br> Register
+    </h3>
+  </div>
+  <div class="position-absolute d-flex justify-content-center align-items-center w-50 h-100 start-0 gate-left-3 z-0">
+    <img src="./assets/images/麵包圖/reserve-4543999_1280.jpg" alt="reserve" class="h-100 w-100 image-cover">
+  </div>
+  <div class="position-absolute d-flex justify-content-center align-items-center w-50 h-100 end-0 gate-right-3 z-0">
+    <h3 class="fw-bold text-center">Step 3
+      <br> Reserve
+    </h3>
+  </div>
+  </section>
+
+
+
 <!-- Reserve -->
 <div class="bg-breadGo position-relative">
   <div class="d-inline-block position-absolute top-50 start-50 text-center center-point">
-    <p>準備好了嗎
+    <p class="fs-4 fw-bold mb-5">準備好了嗎
       <br>前往預定
     </p>
-    <a href="#" class="btn btn-secondary opacity-75 px-6">Go</a>
+    <a href="reserve.html" class="btn btn-light shine opacity-75 px-6 fs-4 fw-bold">Go</a>
   </div>
 </div>
 
@@ -148,13 +239,13 @@
   <div class="container">
     <h2 class="mb-6 border-bottom border-white fw-bold d-inline-block position-relative start-50 center-point">News</h2>
     <ul>
-      <li class="mb-3 border-bottom pb-2"><span class="me-md-120p d-block d-lg-inline">2022.11.15</span>員工尾牙，本店
+      <li class="mb-4 border-bottom pb-2"><span class="me-md-120p d-block d-lg-inline">2022.11.15</span>員工尾牙，本店
         111.12.28 公休
       </li>
-      <li class="mb-3 border-bottom pb-2"><span
+      <li class="mb-4 border-bottom pb-2"><span
           class="me-md-120p d-block d-lg-inline">2022.10.25</span>下周將推出全新商品伯爵牛角麵包，敬請期待
       </li>
-      <li class="mb-3 border-bottom pb-2"><span class="me-md-120p d-block d-lg-inline">2022.08.05</span>祝全天下爸爸節快樂，
+      <li class="mb-4 border-bottom pb-2"><span class="me-md-120p d-block d-lg-inline">2022.08.05</span>祝全天下爸爸節快樂，
         實體店面 08/06~08/08 全面88折
       </li>
     </ul>
@@ -165,14 +256,14 @@
 <div class="bg-dark py-4 py-lg-80p">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 position-relative">
-        <img src="./assets/images/麵包圖/bakery.jpg" alt="bakery" class="rounded-16p ratio-col">
+      <div class="col-lg-6 position-relative img-hover">
+        <img src="./assets/images/麵包圖/bakery.jpg" alt="bakery" class="rounded-3 ratio-col" style="height: 100vh;">
         <p class="position-absolute top-50 start-50 text-white fs-80p center-point">Shop</p>
         <a href="information.html#shop" class="stretched-link"></a>
       </div>
 
-      <div class="col-lg-6 position-relative">
-        <img src="./assets/images/麵包圖/bakery-1868396_1920.jpg" alt="bakery" class="rounded-3 ratio-col">
+      <div class="col-lg-6 position-relative img-hover">
+        <img src="./assets/images/麵包圖/bakery-1868396_1920.jpg" alt="bakery" class="rounded-3 ratio-col" style="height: 100vh;">
         <p class="position-absolute top-50 start-50 text-secondary fs-80p center-point">Concept</p>
         <a href="information.html#concept" class="stretched-link"></a>
       </div>
@@ -182,7 +273,9 @@
 
     <footer class="footer bg-secondary py-2">
       <div class="container text-center d-lg-flex justify-content-between align-items-center">
-        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <a href="index.html">
+          <h2 class="m-0"><img src="./assets/images/麵包圖/logo2.png" alt="logo" style="width: 50px; height: 50px;"></h2>
+        </a>
         <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
         <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
           <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -192,14 +285,44 @@
       </div>
     </footer>
 
+    <!-- sweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <!-- 日曆 -->
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <!-- 倒數 -->
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
+    <!-- C3 D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+
+    <!-- 
+    <script>const api_path = "https://json-server-vercel-topaz.vercel.app";</script> -->
+
+    <!-- <script>
+      const api_path = "http://localhost:3000";
+    </script> -->
+
+    <script>const api_path = "https://render-agk5.onrender.com";</script>
+
+    <script src="./assets/js/index.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 

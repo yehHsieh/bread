@@ -8,11 +8,14 @@
   <title>
     Reserve
   </title>
+  <!-- AOS動畫 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--  -->
   <!-- swiper -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!--  -->
+  <!-- 倒數 -->
+  <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
   <!--  -->
   <!-- 日曆 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
@@ -21,13 +24,14 @@
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-transparent py-0 sticky-top d-flex justify-content-between container">
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-lg py-0 sticky-top d-flex justify-content-between px-5 nav-color">
     <div class="py-3 py-lg-4 navheader d-flex align-items-center">
       <h1 class="mb-0">
-        <a class="navbar-brand me-0 py-0" href="index.html">LOGO</a>
+        <a class="navbar-brand me-0 py-0" href="index.html"><img src="./assets/images/麵包圖/logo2.png" alt="logo"
+            style="width: 60px; height: 60px;"></a>
       </h1>
-      
+
       <input class="menu-check" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="checkbox"
         id="menu-check" />
@@ -46,90 +50,131 @@
     <div class="collapse navbar-collapse border-0 justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav border-top text-center fw-bold">
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="index.html">首頁
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="index.html">首頁
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="reserve.html">麵包預訂
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="register.html"
+            id="loginNav">註冊/登入
           </a>
         </li>
         <li class="nav-item  border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3 list-group-item-hover fs-lg-5" href="register.html">註冊/登入
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="reserve.html">麵包預訂
+          </a>
+        </li>
+        <li class="nav-item  border-bottom border-base py-lg-2">
+          <a class="nav-link py-3 mx-1 px-lg-3 list-group-item-hover fs-lg-5 shine" href="member.html"
+            id="memberCenter">會員中心
           </a>
         </li>
         <li class="nav-item border-bottom border-base py-lg-2">
-          <a class="nav-link py-3 py-lg-0 px-lg-3  list-group-item-hover fs-lg-5" href="cart.html">購物車</a>
+          <a class="nav-link py-3 mx-1 px-lg-3  list-group-item-hover fs-lg-5 shine" href="cart.html" id="cartNav"><i
+              class="fa fa-shopping-cart me-1" aria-hidden="true"></i></a>
         </li>
-
       </ul>
-
     </div>
   </nav>
 
 
   
-<div class="bg-dark">
-    <div class="container">
+<div class="bg-dark p-4">
+    <div class="container" id="productPage">
         <div class="row">
-            <div class="col-lg-10 offset-1">
-                <p><i class="fa fa-clock-o" aria-hidden="true"></i>收單倒數:
-                    <span style="background-color: #000;">0</span>
+
+
+            <div class="col-12 mb-3">
+                <p class="px-3 fs-4 mb-6"><i class="fa fa-clock-o me-3" aria-hidden="true"></i>Close After:</p>
+
+                    <div class="tick" data-did-init="handleTickInit">
+
+                        <div data-repeat="true" data-layout="horizontal fit" data-transform="preset( h, m, s) -> delay" style="font-size: .704px;">
+        
+                            <div class="tick-group">
+        
+                                <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+        
+                                    <span data-view="flip"></span>
+        
+                                </div>
+        
+                                <span data-key="label" data-view="text" class="tick-label fw-bold "></span>
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="tick-onended-message" style="display:none">
+                        <p>Time's up</p>
+                    </div>
+
+                    <!-- <span style="background-color: #000;">0</span>
                     <span style="background-color: #000;">0</span>天
                     <span style="background-color: #000;">1</span>
                     <span style="background-color: #000;">1</span>時
                     <span style="background-color: #000;">1</span>
-                    <span style="background-color: #000;">5</span>分
-                </p>
-                <div class="d-flex">
-                    <input type="text" placeholder="Search">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <span style="background-color: #000;">5</span>分 -->
+                
+    
+
+                <div class="d-flex mb-3 justify-content-end">
+                    <button class="searchBtn rounded-circle p-3 shine border-0 bg-dark"><i class="fa-solid fa-magnifying-glass text-light"></i></button>
+                    <input type="text" placeholder="Search" class="search rounded-pill py-1 ps-3">
                 </div>
             </div>
         </div>
         <!-- Bread Area -->
-        <ul class="row">
+        <ul class="row m-0 breadArea">
             <li class="col-6 col-lg-4">
                 <div class="card border-0">
-                    <a href="detail.html"><img src="./assets/images/麵包圖/bread1.jpg" class="card-img-top" alt="bread1"></a>
+                    <a href="detail.html"><img src="./assets/images/麵包圖/bread1.jpg" class="card-img-top"
+                            alt="bread1"></a>
                     <div class="card-body bg-secondary">
-                        <div class="d-flex">
-                            <p>NT 90</p>
-                            <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
-                            <input type="number" value="0">
+                        <div class="d-flex" style="height: 35px;">
+                            <p class="fs-12p ">NT90</p>
+                            <button class="p-0 border-0"><i class="fa fa-minus-square-o"
+                                    aria-hidden="true"></i></button>
+                            <!-- <input type="number" value="0"> -->
+                            <p>0</p>
                             <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
                             <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                         </div>
-                        <h3 class="card-title">歐式麵包</h3>
+                        <h3 class="card-title fs-4 mt-3">歐式麵包</h3>
                     </div>
                 </div>
             </li>
             <li class="col-6 col-lg-4">
                 <div class="card border-0">
-                    <a href="detail.html"><img src="./assets/images/麵包圖/bread3.jpg" class="card-img-top" alt="bread3"></a>
+                    <a href="detail.html"><img src="./assets/images/麵包圖/bread3.jpg" class="card-img-top"
+                            alt="bread3"></a>
                     <div class="card-body bg-secondary">
-                        <div class="d-flex">
-                            <p>NT 90</p>
-                            <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
+                        <div class="d-flex" style="height: 35px;">
+                            <p class="fs-12p ">NT90</p>
+                            <button class="p-0 border-0"><i class="fa fa-minus-square-o"
+                                    aria-hidden="true"></i></button>
                             <input type="number" value="0">
                             <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
                             <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                         </div>
-                        <h3 class="card-title">歐式麵包</h3>
+                        <h3 class="card-title fs-4 mt-3">歐式麵包</h3>
                     </div>
                 </div>
             </li>
             <li class="col-6 col-lg-4">
                 <div class="card border-0">
-                    <a href="detail.html"><img src="./assets/images/麵包圖/bread7.jpg" class="card-img-top" alt="bread7"></a>
+                    <a href="detail.html"><img src="./assets/images/麵包圖/bread7.jpg" class="card-img-top"
+                            alt="bread7"></a>
                     <div class="card-body bg-secondary">
-                        <div class="d-flex">
-                            <p>NT 90</p>
-                            <button class="p-0 border-0"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>
+                        <div class="d-flex" style="height: 35px;">
+                            <p class="fs-12p ">NT90</p>
+                            <button class="p-0 border-0"><i class="fa fa-minus-square-o"
+                                    aria-hidden="true"></i></button>
                             <input type="number" value="0">
                             <button class="p-0 border-0"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
                             <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                         </div>
-                        <h3 class="card-title">歐式麵包</h3>
+                        <h3 class="card-title fs-4 mt-3">歐式麵包</h3>
                     </div>
                 </div>
             </li>
@@ -139,7 +184,9 @@
 
     <footer class="footer bg-secondary py-2">
       <div class="container text-center d-lg-flex justify-content-between align-items-center">
-        <a href="index.html"><h2 class="m-0">LOGO</h2></a>
+        <a href="index.html">
+          <h2 class="m-0"><img src="./assets/images/麵包圖/logo2.png" alt="logo" style="width: 50px; height: 50px;"></h2>
+        </a>
         <p class="fs-12p fs-lg-14p m-0">©BREAD / all rights reserved.</p>
         <ul class="d-flex justify-content-center justify-content-lg-between m-0 p-0">
           <li><a href="#" class="px-2 fs-4 fs-lg-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -149,14 +196,44 @@
       </div>
     </footer>
 
+    <!-- sweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <!-- 日曆 -->
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/cfc080f088.js" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <!-- 倒數 -->
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
+    <!-- C3 D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+
+    <!-- 
+    <script>const api_path = "https://json-server-vercel-topaz.vercel.app";</script> -->
+
+    <!-- <script>
+      const api_path = "http://localhost:3000";
+    </script> -->
+
+    <script>const api_path = "https://render-agk5.onrender.com";</script>
+
+    <script src="./assets/js/reserve.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 
