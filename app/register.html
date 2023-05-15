@@ -1,0 +1,153 @@
+---
+title: Register
+layout: ./app/layout.ejs
+engine: ejs
+current: register
+---
+<div class="bg-dark pt-120p">
+    <div class="container position-relative">
+        <!-- <ul class="nav nav-tabs row border-0">
+            <div class="col-md-3 offset-3 g-0">
+                <li class="nav-item bg-secondary">
+                    <a class="nav-link active register text-center" aria-current="page" href="#">註冊</a>
+
+                    <div class="registerTab p-3">
+                        <form action="#"> -->
+        <!-- <label for="name" class="me-6 mt-3">姓名:</label>
+                            <input type="text" name="name" id="userName" placeholder="name">
+                            <br>
+                            <label class="me-6 mt-3" for="tel">電話:</label>
+                            <input type="tel" name="tel" id="tel" placeholder="tel">
+                            <br>
+                            <label class="me-6 mt-3" for="email">信箱:</label>
+                            <input type="email" name="email" id="email" placeholder="email">
+                            <br>
+                            <!-- <label class="me-6 mt-3" for="account">帳號:</label>
+                            <input type="text" name="account" id="account" placeholder="account"> -->
+        <!-- <br> -->
+        <!-- <label class="me-6 mt-3" for="password">密碼:</label>
+                            <input type="password" name="password" id="password" placeholder="password">
+                            <br>
+                            <label for="passwordCheck" class="mt-3">密碼確認:</label>
+                            <input type="password" name="passwordCheck" id="passwordCheck" placeholder="passwordCheck">
+
+                            <!-- Button trigger modal -->
+        <!-- <input id="registerBtn" type="submit" class="btn btn-primary d-block mt-3" value="確認" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                            </input> -->
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content text-black-50">
+                                        <div class="modal-header border-0">
+                                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                            <p>註冊成功</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+        <!-- </form> -->
+        <!-- </div>
+                </li> -->
+        <!-- </div> -->
+        <!-- <div class="col-md-3 g-0">
+                <li class="nav-item bg-secondary">
+                    <a class="nav-link active loginBtn text-center" aria-current="page" href="#">登入</a> -->
+
+        <!-- <div class="loginTab d-none p-3">
+                        <form action="#">
+                            <label class="me-6 mt-3" for="loginAccount">信箱:</label>
+                            <input type="text" name="loginAccount" id="loginAccount" placeholder="account">
+                            <br>
+                            <label class="me-6 mt-3" for="loginPassword">密碼:</label>
+                            <input type="password" name="loginPassword" id="loginPassword" placeholder="password"
+                                class="d-block">
+                            <a id="loginBtn" class="btn btn-primary mt-3" href="./member.html">
+                                登入
+                            </a>
+                        </form>
+                    </div> -->
+        <!-- </li>
+            </div>
+
+        </ul> -->
+
+        <!-- 已登入 -->
+
+
+        <div class="registerArea">
+            <div class="login-box login-box1">
+                <div class="d-flex">
+                    <h2>Register</h2>
+                    <a href="#" class="btn ms-4 pt-3 changeBtn" style="height: 50px;">已是會員</a>
+                </div>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="" required="" id="userName">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="number" name="" required="" id="tel">
+                        <label>tel</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="email" name="" required="" id="email">
+                        <label>email</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="password">
+                        <label>password</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="passwordCheck">
+                        <label>passwordCheck</label>
+                    </div>
+                    <a href="#" id="registerBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Register
+                    </a>
+                </form>
+            </div>
+
+
+            <div class="login-box login-box2 d-none">
+                <div class="d-flex">
+                    <h2>Login</h2>
+                    <a href="#" class="btn ms-4 pt-3 changeBtn" style="height: 50px;">未註冊</a>
+                </div>
+                <form>
+                    <div class="user-box">
+                        <input type="email" name="" required="" id="loginAccount">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="loginPassword">
+                        <label>Password</label>
+                    </div>
+                    <a href="#" id="loginBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Login
+                    </a>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

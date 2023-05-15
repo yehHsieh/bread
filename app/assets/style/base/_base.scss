@@ -1,0 +1,33 @@
+html,
+body {
+    font-family:"Quicksand", "Gelasio", "Azeret Mono", "Noto Sans TC", monospace, sans-serif;
+    letter-spacing: .2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    aspect-ratio: 16/9;
+    /* 額外確保圖片縮放時會有最好的效果 */
+    object-fit: cover;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+    // padding: 0 !important;
+    // margin: 0 !important;
+}
+
+// ul{
+//     margin-bottom: 0 !important;
+//     padding-left: 0 !important;
+// }

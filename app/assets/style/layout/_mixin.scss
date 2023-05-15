@@ -1,0 +1,40 @@
+@mixin iphone {
+    @media(min-width: 576px) {
+        @content
+    }
+}
+
+@mixin ipad {
+    @media(min-width: 768px) {
+        @content
+    }
+}
+
+@mixin laptop {
+    @media(min-width: 992px) {
+        @content
+    }
+}
+
+
+.shine {
+    &:hover {
+        background-color: $primary;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px $primary,
+            0 0 25px $primary,
+            0 0 50px $primary,
+            0 0 100px $primary;
+    }
+}
+
+.img-hover {
+    overflow: hidden;
+    transform: scale(1, 1);
+    transition: all .3s ease-out;
+
+    &:hover {
+        transform: scale(1.05, 1.05);
+    }
+}
