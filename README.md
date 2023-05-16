@@ -15,32 +15,9 @@
 
 (https://yehhsieh.github.io/bread/index.html)
 
-##
-![圖片參考名稱](https://github.com/yehHsieh/VueSideProject/blob/main/src/assets/img/VueProject.png "Logo")
 
 ## 使用技術、工具
-Vue 3 (Options API)、Axios 非同步遠端請求 API 、Vite、Pinia、 RWD、Bootstrap5 框架、 SCSS 樣式設計、VeeValidate 套件
+JavaScript (ES6)、串接 RESTful API 、C3.js 套件、 GSAP 套件、Bootstrap5 框架、 SCSS 樣式設計
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## 登入後台(密碼提示)
+password:1＊＊＊5
